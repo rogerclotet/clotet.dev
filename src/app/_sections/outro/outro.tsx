@@ -4,7 +4,7 @@ import { Mail } from "lucide-react";
 
 function MailLink({ className }: { className?: string }) {
   return (
-    <div className={cn("flex gap-2 items-center", className)}>
+    <div className={cn("flex gap-6 items-center", className)}>
       <div className="w-full h-[1px] border-[rgb(var(--primary))] border-b-2" />
       <a
         href="mailto:roger@clotet.dev"
@@ -18,7 +18,7 @@ function MailLink({ className }: { className?: string }) {
 
 export default function Outro() {
   return (
-    <div className="h-[80vh] flex flex-col justify-center">
+    <div className="h-dvh flex flex-col justify-center">
       <Title className="mb-8">That&apos;s it!</Title>
       <p>
         I&apos;m always working in side projects and willing to collaborate.

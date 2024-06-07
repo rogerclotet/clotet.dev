@@ -6,7 +6,7 @@ import { workExperience } from "./data";
 
 export default function WorkExperience() {
   return (
-    <div className="min-h-[80vh]">
+    <div>
       <div className="flex justify-between items-end pb-4 border-[rgb(var(--primary))] border-b-2 mr-4">
         <Title>Work Experience</Title>
         <a
