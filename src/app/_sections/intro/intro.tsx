@@ -9,8 +9,8 @@ import { Mail } from "lucide-react";
 
 export default function Intro() {
   return (
-    <div className="h-dvh flex items-center justify-center">
-      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 p-2 lg:p-6 items-center">
+    <div className="min-h-dvh flex items-center justify-center p-2 lg:p-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 items-center">
         <div className="mb-14">
           <Logo width={50} height={50} />
           <h2 className="pt-2 text-3xl">Roger Clotet</h2>
