@@ -36,7 +36,7 @@ My efforts played a significant role in improving the developer experience and e
     logo: "/jobs/socialpoint.png",
     url: "https://www.socialpoint.es",
     period: "June 2012 - May 2019",
-    text: `At Social Point I developed the server side of highly successful mobile games, catering to millions of daily active users. I worked in a 5-person team for 5 years and later in a 2-person team for a year.
+    text: `At Socialpoint I developed the server side of highly successful mobile games, catering to millions of daily active users. I worked in a 5-person team for 5 years and later in a 2-person team for a year.
 One of my significant contributions was leading a project that introduced the first real-time backend part of our system developed in Go, and improving the continuous deployment strategy for real-time servers.
 I encountered numerous challenges, primarily related to concurrency and high availability. I primarily used PHP (with Symfony) and Go in AWS.`,
   },
