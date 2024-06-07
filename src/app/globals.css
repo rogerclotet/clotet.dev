@@ -13,6 +13,10 @@
   --background: 27, 30, 40;
 }
 
+html.sr .load-hidden {
+  visibility: hidden;
+}
+
 body {
   color: rgb(var(--foreground));
   background: rgb(var(--background));
