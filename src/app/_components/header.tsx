@@ -30,7 +30,7 @@ export default function Header() {
   return (
     <div
       className={cn(
-        "flex items-center justify-between w-full fixed px-4 pb-4 h-20 transition-all duration-200 ease-in bg-gradient-to-b from-[rgb(var(--background))] from-30% to-transparent z-10",
+        "flex items-center justify-between w-full fixed px-4 pb-4 h-20 transition-all duration-200 ease-in 2xl:from-transparent bg-gradient-to-b from-[rgb(var(--background))] from-30% to-transparent z-10",
         {
           "opacity-100 translate-y-0": isVisible,
           "opacity-0 translate-y-[-1em]": !isVisible,
