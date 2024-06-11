@@ -10,6 +10,14 @@ export type Job = {
 export const workExperience: Job[] = [
   {
     title: "Senior Software Engineer",
+    company: "Eventbrite",
+    logo: "/jobs/eventbrite.png",
+    url: "https://www.eventbrite.com",
+    period: "June 2024 - Present",
+    text: `I'm currently working in the Checkout team as a full-stack engineer.`,
+  },
+  {
+    title: "Senior Software Engineer",
     company: "TravelPerk",
     logo: "/jobs/travelperk.png",
     url: "https://travelperk.com",
