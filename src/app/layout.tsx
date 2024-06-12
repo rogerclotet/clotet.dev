@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { CSPostHogProvider } from "./providers";
 
 export const metadata: Metadata = {
   title: "Roger Clotet",
@@ -15,8 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="sr">
-      <head></head>
-      <body>{children}</body>
+      <CSPostHogProvider>
+        <body>{children}</body>
+      </CSPostHogProvider>
     </html>
   );
 }
