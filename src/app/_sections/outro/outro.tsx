@@ -5,7 +5,7 @@ import { Mail } from "lucide-react";
 function MailLink({ className }: { className?: string }) {
   return (
     <div className={cn("flex gap-6 items-center", className)}>
-      <div className="w-full h-px border-[rgb(var(--primary))] border-b-2" />
+      <div className="w-full h-px border-[hsl(var(--primary-foreground))] border-b-2" />
       <a
         href="mailto:roger@clotet.dev"
         className="flex items-center gap-2 font-semibold text-lg"

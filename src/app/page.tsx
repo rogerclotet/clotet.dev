@@ -1,4 +1,6 @@
+import BlogPreview from "./_components/blog-preview";
 import Header from "./_components/header";
+import HiddenScroll from "./_components/hidden-scroll";
 import Revealing from "./_components/revealing";
 import Intro from "./_sections/intro/intro";
 import Outro from "./_sections/outro/outro";
@@ -7,10 +9,16 @@ import WorkExperience from "./_sections/work-experience/work-experience";
 export default function Home() {
   return (
     <>
-      <Header />
-      <main className="container mx-auto px-2 lg:px-4 xl:px-8 mb-6">
+      <HiddenScroll>
+        <Header />
+      </HiddenScroll>
+
+      <div className="container mx-auto px-2 lg:px-4 xl:px-8 mb-6">
         <Revealing>
           <Intro />
+        </Revealing>
+        <Revealing>
+          <BlogPreview />
         </Revealing>
         <Revealing>
           <WorkExperience />
@@ -18,7 +26,7 @@ export default function Home() {
         <Revealing>
           <Outro />
         </Revealing>
-      </main>
+      </div>
     </>
   );
 }

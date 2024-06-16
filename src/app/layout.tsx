@@ -17,7 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="sr">
       <CSPostHogProvider>
-        <body>{children}</body>
+        <body>
+          <main>{children}</main>
+        </body>
       </CSPostHogProvider>
     </html>
   );

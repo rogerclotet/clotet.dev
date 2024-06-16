@@ -8,7 +8,12 @@ export default function Title({
   className?: string;
 }) {
   return (
-    <h1 className={cn("text-[rgb(var(--primary))] text-6xl", className)}>
+    <h1
+      className={cn(
+        "text-[hsl(var(--primary-foreground))] text-6xl",
+        className
+      )}
+    >
       {children}
     </h1>
   );

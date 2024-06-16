@@ -14,7 +14,7 @@ export default function Intro() {
         <div className="mb-14">
           <Logo width={50} height={50} />
           <h2 className="pt-2 text-3xl">Roger Clotet</h2>
-          <h1 className="pb-4 text-6xl text-[rgb(var(--primary))]">
+          <h1 className="pb-4 text-6xl text-[hsl(var(--primary-foreground))]">
             Hello, World!
           </h1>
 
@@ -37,7 +37,7 @@ export default function Intro() {
           </div>
         </div>
 
-        <div className="text-[rgb(var(--primary))] text-sm lg:text-lg leading-tight text-right">
+        <div className="text-[hsl(var(--primary-foreground))] text-sm lg:text-lg leading-tight text-right">
           <p>I&apos;m a dad and a software craftsman based in Girona</p>
           <p>I build stuff for the web and distributed systems</p>
           <p>I love learning, photography, videogames, and driving</p>

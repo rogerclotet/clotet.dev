@@ -6,12 +6,12 @@ export default function JobDetails({ job }: { job: Job }) {
     <div>
       <div className="flex items-center gap-3 py-2">
         <Image src={job.logo} alt={job.company} width={40} height={40} />
-        <h2 className="text-[rgb(var(--secondary))] text-3xl">
+        <h2 className="text-[hsl(var(--secondary))] text-3xl">
           <a href={job.url}>{job.company}</a>
         </h2>
       </div>
 
-      <p className="text-2xl text-[rgb(var(--primary))] monospace">
+      <p className="text-2xl text-[hsl(var(--primary-foreground))] monospace">
         {job.title}
       </p>
 
