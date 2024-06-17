@@ -1,3 +1,4 @@
+import { TooltipProvider } from "@/components/ui/tooltip";
 import type { Metadata } from "next";
 import "./globals.css";
 import { CSPostHogProvider } from "./providers";
@@ -18,7 +19,9 @@ export default function RootLayout({
     <html lang="en" className="sr">
       <CSPostHogProvider>
         <body>
-          <main>{children}</main>
+          <TooltipProvider>
+            <main>{children}</main>
+          </TooltipProvider>
         </body>
       </CSPostHogProvider>
     </html>

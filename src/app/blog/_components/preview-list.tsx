@@ -14,7 +14,7 @@ import TagBadge from "./tag-badge";
 export default function PreviewList({ posts }: { posts: any[] }) {
   return (
     <RevealList
-      delay={500}
+      delay={300}
       interval={60}
       className="grid md:grid-cols-2 gap-4 py-8"
     >

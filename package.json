@@ -12,6 +12,8 @@
     "@fontsource/roboto-condensed": "^5.0.16",
     "@fontsource/share-tech-mono": "^5.0.12",
     "@icons-pack/react-simple-icons": "^9.5.0",
+    "@radix-ui/react-dialog": "^1.0.5",
+    "@radix-ui/react-tooltip": "^1.0.7",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "gray-matter": "^4.0.3",
