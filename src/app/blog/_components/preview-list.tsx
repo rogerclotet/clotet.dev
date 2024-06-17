@@ -20,25 +20,21 @@ export default function PreviewList({ posts }: { posts: any[] }) {
       className="grid md:grid-cols-2 gap-4 py-8"
     >
       {posts.map((post) => (
-        <Link
-          key={post.slug}
-          href={`/blog/${post.slug}`}
-          className="visibility-hidden"
-        >
-          <Card>
-            <CardHeader>
-              <CardTitle>{post.title}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <CardDescription>{post.description}</CardDescription>
-            </CardContent>
-            <CardFooter className="gap-2 flex-wrap">
-              {post.tags.map((tag: string) => (
-                <TagBadge key={tag} tag={tag} />
-              ))}
-            </CardFooter>
-          </Card>
-        </Link>
+        <Card key={post.slug} className="visibility-hidden">
+          <CardHeader>
+            <CardTitle>
+              <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <CardDescription>{post.description}</CardDescription>
+          </CardContent>
+          <CardFooter className="gap-2 flex-wrap">
+            {post.tags.map((tag: string) => (
+              <TagBadge key={tag} tag={tag} />
+            ))}
+          </CardFooter>
+        </Card>
       ))}
     </RevealList>
   );
