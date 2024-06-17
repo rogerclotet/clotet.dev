@@ -6,7 +6,7 @@ export default function Projects() {
   const projects = getProjects();
 
   return (
-    <div className="min-h-[70vh] flex flex-col p-2 lg:p-6 mb-20 gap-6">
+    <div className="flex flex-col p-2 lg:p-6 mb-20 gap-6">
       <Title>Projects</Title>
       <p className="text-lg">
         These are some of my personal projects. Most things I develop as side

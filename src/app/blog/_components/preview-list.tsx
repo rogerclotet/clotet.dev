@@ -13,11 +13,7 @@ import TagBadge from "./tag-badge";
 
 export default function PreviewList({ posts }: { posts: any[] }) {
   return (
-    <RevealList
-      delay={300}
-      interval={60}
-      className="grid md:grid-cols-2 gap-4 py-8"
-    >
+    <RevealList delay={300} interval={60} className="grid md:grid-cols-2 gap-4">
       {posts.map((post) => (
         <Card key={post.slug} className="visibility-hidden">
           <CardHeader>

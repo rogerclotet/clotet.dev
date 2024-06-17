@@ -8,7 +8,7 @@ export default function WorkExperience() {
   return (
     <div>
       <div className="flex flex-wrap gap-4 justify-between items-baseline py-4 border-[hsl(var(--primary-foreground))] border-b-2 mr-4">
-        <Title>Work Experience</Title>
+        <Title className="pl-6">Work Experience</Title>
         <a
           href="https://gitlab.com/rogerclotet/resume/-/raw/master/resume.pdf"
           target="_blank"
