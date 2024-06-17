@@ -20,7 +20,7 @@ export type Project = {
 
 const projectsDirectory = path.join(
   process.cwd(),
-  "src/app/projects/_projects"
+  "src/app/_sections/projects/_projects"
 );
 
 export function getProjects(): Project[] {

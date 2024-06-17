@@ -7,17 +7,29 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import type { Project } from "@/lib/projects/projects";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { getCategoryName } from "../_utils/category-name";
 import CategoryIcon from "./category-icon";
 import ProjectLinks from "./project-links";
 import ProjectPreview from "./project-preview";
 
-export default function Project({ project }: { project: Project }) {
+export default function ProjectDialog({
+  project,
+  className,
+}: {
+  project: Project;
+  className?: string;
+}) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <ProjectPreview project={project} className="cursor-pointer" />
+        <div>
+          <ProjectPreview
+            project={project}
+            className={cn("cursor-pointer", className)}
+          />
+        </div>
       </DialogTrigger>
       <DialogContent className="gap-0">
         <DialogHeader>

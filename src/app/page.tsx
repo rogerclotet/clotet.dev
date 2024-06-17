@@ -4,7 +4,7 @@ import Revealing from "./_components/revealing";
 import BlogPreview from "./_sections/blog-preview";
 import Intro from "./_sections/intro/intro";
 import Outro from "./_sections/outro/outro";
-import Projects from "./_sections/projects";
+import Projects from "./_sections/projects/projects";
 import WorkExperience from "./_sections/work-experience/work-experience";
 
 export default function Home() {

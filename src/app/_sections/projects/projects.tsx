@@ -1,6 +1,6 @@
 import Title from "@/app/_components/title";
 import { getProjects } from "@/lib/projects/projects";
-import Project from "../projects/_components/project";
+import ProjectList from "./_components/project-list";
 
 export default function Projects() {
   const projects = getProjects();
@@ -13,11 +13,7 @@ export default function Projects() {
         projects don&apos;t end up anywhere and only serve as learning
         experiences. Here are some of the ones worth sharing.
       </p>
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8">
-        {projects.map((project) => (
-          <Project key={project.slug} project={project} />
-        ))}
-      </div>
+      <ProjectList projects={projects} />
     </div>
   );
 }
