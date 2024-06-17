@@ -20,7 +20,11 @@ export default function PreviewList({ posts }: { posts: any[] }) {
       className="grid md:grid-cols-2 gap-4 py-8"
     >
       {posts.map((post) => (
-        <Link key={post.slug} href={`/blog/${post.slug}`}>
+        <Link
+          key={post.slug}
+          href={`/blog/${post.slug}`}
+          className="visibility-hidden"
+        >
           <Card>
             <CardHeader>
               <CardTitle>{post.title}</CardTitle>

@@ -78,6 +78,10 @@
     font-family: "Share Tech Mono", monospace;
   }
 
+  .visibility-hidden {
+    visibility: hidden;
+  }
+
   .blog-post {
     h3 {
       font-size: 2em;
