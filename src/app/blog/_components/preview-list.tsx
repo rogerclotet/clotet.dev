@@ -22,7 +22,12 @@ export default function PreviewList({ posts }: { posts: any[] }) {
         <Card key={post.slug} className="visibility-hidden">
           <CardHeader>
             <CardTitle>
-              <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+              <Link
+                href={`/blog/${post.slug}`}
+                className="text-[hsl(var(--primary-foreground))]"
+              >
+                {post.title}
+              </Link>
             </CardTitle>
           </CardHeader>
           <CardContent>{post.description}</CardContent>
