@@ -6,7 +6,7 @@ import Logo from "./logo";
 
 export default function Header() {
   const pathname = usePathname();
-  const pathnameParts = pathname.split("/").slice(1, 2);
+  const pathnameParts = pathname.replace(/\/$/g, "").split("/").slice(1, 2);
 
   return (
     <div className="flex items-center justify-between w-full fixed px-4 pb-4 h-20 bg-gradient-to-b from-[hsl(var(--background))] from-30% to-transparent z-10">
