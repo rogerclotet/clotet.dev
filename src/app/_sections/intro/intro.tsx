@@ -4,8 +4,8 @@ import {
   SiGitlab,
   SiLinkedin,
   SiMastodon,
+  SiProtonmail,
 } from "@icons-pack/react-simple-icons";
-import { Mail } from "lucide-react";
 
 export default function Intro() {
   return (
@@ -32,7 +32,7 @@ export default function Intro() {
               <SiMastodon size={24} />
             </a>
             <a href="mailto:roger@clotet.dev">
-              <Mail size={24} />
+              <SiProtonmail size={24} />
             </a>
           </div>
         </div>
