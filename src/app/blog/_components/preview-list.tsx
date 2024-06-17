@@ -3,7 +3,6 @@
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -26,9 +25,7 @@ export default function PreviewList({ posts }: { posts: any[] }) {
               <Link href={`/blog/${post.slug}`}>{post.title}</Link>
             </CardTitle>
           </CardHeader>
-          <CardContent>
-            <CardDescription>{post.description}</CardDescription>
-          </CardContent>
+          <CardContent>{post.description}</CardContent>
           <CardFooter className="gap-2 flex-wrap">
             {post.tags.map((tag: string) => (
               <TagBadge key={tag} tag={tag} />
