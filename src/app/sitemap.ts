@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: "https://acme.com/blog",
+      url: "https://clotet.dev/blog",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.6,
