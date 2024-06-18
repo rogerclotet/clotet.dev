@@ -7,15 +7,14 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { RevealList } from "next-reveal";
 import Link from "next/link";
 import TagBadge from "./tag-badge";
 
 export default function PreviewList({ posts }: { posts: any[] }) {
   return (
-    <RevealList delay={300} interval={60} className="grid md:grid-cols-2 gap-4">
+    <div className="grid md:grid-cols-2 gap-4">
       {posts.map((post) => (
-        <Card key={post.slug} className="visibility-hidden">
+        <Card key={post.slug}>
           <CardHeader>
             <CardTitle>
               <Link
@@ -34,6 +33,6 @@ export default function PreviewList({ posts }: { posts: any[] }) {
           </CardFooter>
         </Card>
       ))}
-    </RevealList>
+    </div>
   );
 }
