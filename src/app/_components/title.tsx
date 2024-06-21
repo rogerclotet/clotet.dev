@@ -10,7 +10,7 @@ export default function Title({
   return (
     <h1
       className={cn(
-        "text-[hsl(var(--primary-foreground))] text-6xl",
+        "text-[hsl(var(--primary-foreground))] text-4xl md:text-6xl",
         className
       )}
     >
