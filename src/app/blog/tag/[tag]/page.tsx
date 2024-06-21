@@ -12,7 +12,7 @@ export default function BlogTag({ params }: { params: { tag: string } }) {
     <>
       <Title>Dev Learnings</Title>
       <h2 className="text-2xl mt-2">My notes about software development</h2>
-      <div className="flex items-center gap-2 mt-8">
+      <div className="flex items-center gap-2 my-8">
         Filtered by
         <Link href="/blog">
           <Badge
