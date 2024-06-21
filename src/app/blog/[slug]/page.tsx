@@ -1,15 +1,16 @@
 import Title from "@/app/_components/title";
 import { getPost } from "@/lib/blog/posts";
+import type { Metadata, ResolvingMetadata } from "next";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import TagBadge from "../_components/tag-badge";
 import "../highlight.css";
 
-export default async function BlogPost({
-  params,
-}: {
-  params: { slug: string };
-}) {
+type Params = {
+  slug: string;
+};
+
+export default async function BlogPost({ params }: { params: Params }) {
   const postData = await getPost(params.slug);
   if (!postData) {
     return redirect("/blog");
@@ -52,4 +53,21 @@ export default async function BlogPost({
       </div>
     </div>
   );
+}
+
+export async function generateMetadata(
+  { params }: { params: Params },
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const postData = await getPost(params.slug);
+  if (!postData) {
+    return {};
+  }
+
+  const { post } = postData;
+
+  return {
+    title: `${post.title} - Roger Clotet`,
+    description: post.description,
+  };
 }
