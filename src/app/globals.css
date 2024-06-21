@@ -86,15 +86,19 @@
       color: hsl(var(--primary-foreground));
     }
 
-    p {
-      margin: 1em 0;
+    p,
+    li {
       font-size: 1.125rem;
       line-height: 1.75rem;
     }
 
+    p {
+      margin: 1em 0;
+    }
+
     li {
       list-style: disc inside;
-      margin: 0.3em 0 0.5em 0;
+      margin: 0.3em 0;
     }
 
     a {
