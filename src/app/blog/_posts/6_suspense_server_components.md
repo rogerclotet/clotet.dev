@@ -75,4 +75,4 @@ My first approach was to just add a `Suspense` component in the same page I was 
 
 ### Source code
 
-You can find the full example on <https://gitlab.com/rogerclotet/nextjs-suspense-example>.
+You can find the full example on this [GitLab repository](https://gitlab.com/rogerclotet/nextjs-suspense-example).
