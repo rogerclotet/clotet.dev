@@ -17,7 +17,7 @@ export default function BlogLayout({
   return (
     <>
       <Header />
-      <div className="container mx-auto px-2 lg:px-4 xl:px-8 mb-6 pt-32">
+      <div className="container mx-auto px-2 lg:px-4 xl:px-8 mb-6 pt-24 md:pt-32">
         {children}
       </div>
     </>
