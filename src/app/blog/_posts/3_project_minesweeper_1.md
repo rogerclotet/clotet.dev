@@ -6,7 +6,7 @@ tags: ["frontend", "backend", "javascript", "nodejs", "react", "socket.io"]
 date: 2021-05-11
 ---
 
-The goal of this project was to learn some new technologies (new for me, of course) while completing a simple project 
+The goal of this project was to learn some new technologies (new for me, of course) while completing a simple project
 from end to end.
 
 I wanted to make something in real time to try out and learn Socket.IO, and a simple game with straightforward
@@ -99,5 +99,5 @@ There is also a very good [Get Started](https://socket.io/get-started) with some
 
 ### I want to play
 
-Sure, you can play the game on https://minesweeper.clotet.dev and see the code on
-https://gitlab.com/rogerclotet/minesweeper.
+Sure, you can play the game on <https://minesweeper.clotet.dev> and see the code on
+<https://gitlab.com/rogerclotet/minesweeper>.
