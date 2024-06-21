@@ -26,9 +26,12 @@ export async function getPost(slug: string) {
     .process(post.content);
   const htmlContent = String(processedContent);
 
-  const related = getPosts().filter(
-    (p) => p.slug !== post.slug && post.tags.some((tag) => p.tags.includes(tag))
-  );
+  const related = getPosts()
+    .filter(
+      (p) =>
+        p.slug !== post.slug && post.tags.some((tag) => p.tags.includes(tag))
+    )
+    .slice(0, 3);
 
   return {
     post: {
