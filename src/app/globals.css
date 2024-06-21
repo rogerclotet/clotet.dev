@@ -80,6 +80,11 @@
 
   .blog-post,
   .project {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+
     h3 {
       font-size: 2em;
       margin: 0.5em 0;
@@ -99,10 +104,6 @@
     li {
       list-style: disc inside;
       margin: 0.3em 0;
-    }
-
-    a {
-      white-space: nowrap;
     }
 
     img {
