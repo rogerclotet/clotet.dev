@@ -69,5 +69,8 @@ export async function generateMetadata(
   return {
     title: `${post.title} - Roger Clotet`,
     description: post.description,
+    alternates: {
+      canonical: `https://clotet.dev/blog/${params.slug}`,
+    },
   };
 }

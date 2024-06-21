@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   description:
     "I'm a dad and a software craftsman based in Girona. I build stuff for the web and distributed systems. I love learning, photography, videogames, and driving",
   icons: [{ rel: "icon", url: "/favicon.png" }],
+  alternates: {
+    canonical: "https://clotet.dev",
+  },
 };
 
 export default function RootLayout({

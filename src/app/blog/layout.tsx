@@ -1,4 +1,13 @@
+import type { Metadata } from "next";
 import Header from "../_components/header";
+
+export const metadata: Metadata = {
+  title: "Dev Learnings - Roger Clotet",
+  description: "My notes on software development",
+  alternates: {
+    canonical: "https://clotet.dev/blog",
+  },
+};
 
 export default function BlogLayout({
   children,

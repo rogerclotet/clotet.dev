@@ -13,7 +13,7 @@ export default function Blog() {
         <div>
           <Title>Dev Learnings</Title>
           <h2 className="text-2xl mt-2 ml-1">
-            My notes about software development
+            My notes on software development
           </h2>
         </div>
         <div className="flex flex-wrap gap-2 lg:max-w-[45%]">
