@@ -29,7 +29,7 @@ After searching for a better solution, I learned about `VisibleOnScreenNotifier2
 ```gdscript
 func _on_exited_chunk():
   visibility_notifier.global_position = _get_player_position()
-	_populate_terrain()
+  _populate_terrain()
 ```
 
 And `_populate_terrain` is as simple as this for now:
@@ -38,11 +38,11 @@ And `_populate_terrain` is as simple as this for now:
 func _populate_terrain()
   var player_position = _get_player_position()
 
-	for i in range(-CHUNK_SIZE * 2, CHUNK_SIZE * 2):
-		for j in range(-CHUNK_SIZE * 2, CHUNK_SIZE * 2):
-			var pos = player_position + Vector2i(i, j)
-			if _is_empty(pos):
-				_populate_cell(pos, _pick_random_tile())  
+  for i in range(-CHUNK_SIZE * 2, CHUNK_SIZE * 2):
+    for j in range(-CHUNK_SIZE * 2, CHUNK_SIZE * 2):
+      var pos = player_position + Vector2i(i, j)
+      if _is_empty(pos):
+        _populate_cell(pos, _pick_random_tile())  
 ```
 
 ### Improving performance
@@ -53,36 +53,36 @@ This generated the proper tiles, but there was some stuttering every time new ti
 func _populate_cell(pos: Vector2i, tile: Vector2i) -> void:
   var player_position = _get_player_position()
 
-	for i in range(-CHUNK_SIZE * 2, CHUNK_SIZE * 2):
-		for j in range(-CHUNK_SIZE * 2, CHUNK_SIZE * 2):
-			var pos = player_position + Vector2i(i, j)
-			if _is_empty(pos):
-				_populate_cell(pos, _pick_random_tile()) 
+  for i in range(-CHUNK_SIZE * 2, CHUNK_SIZE * 2):
+    for j in range(-CHUNK_SIZE * 2, CHUNK_SIZE * 2):
+      var pos = player_position + Vector2i(i, j)
+      if _is_empty(pos):
+        _populate_cell(pos, _pick_random_tile()) 
 
 func _populate_cell(pos: Vector2i, tile: Vector2i) -> void:
-	tilemap.set_cell.call_deferred(
-		TERRAIN_LAYER_ID, pos, TERRAIN_SOURCE_ID, tile, ALTERNATIVE_TILE_ID
-	)
+  tilemap.set_cell.call_deferred(
+    TERRAIN_LAYER_ID, pos, TERRAIN_SOURCE_ID, tile, ALTERNATIVE_TILE_ID
+  )
 
 func _on_exited_chunk():
-	visibility_notifier.global_position = (
-		get_tree().get_first_node_in_group(Player.GROUP).global_position
-	)
+  visibility_notifier.global_position = (
+    get_tree().get_first_node_in_group(Player.GROUP).global_position
+  )
 
-	var thread = Thread.new()
-	thread.start(func(): _populate_terrain())
-	thread.wait_to_finish()
+  var thread = Thread.new()
+  thread.start(func(): _populate_terrain())
+  thread.wait_to_finish()
 ```
 
 This worked a lot better. It didn't stutter, but if you noticed, we're just adding more and more tiles, and some of them won't be visible ever again. To avoid cluttering the TileMap and using too many resources, we can add a simple function that cleans up far away tiles from time to time:
 
 ```gdscript
 func _clean_up(player_position: Vector2i) -> void:
-	var used_cells = tilemap.get_used_cells_by_id(TERRAIN_LAYER_ID)
+  var used_cells = tilemap.get_used_cells_by_id(TERRAIN_LAYER_ID)
 
-	for cell in used_cells:
-		if not _is_near_player(cell, player_position):
-			tilemap.set_cell.call_deferred(TERRAIN_LAYER_ID, cell)
+  for cell in used_cells:
+    if not _is_near_player(cell, player_position):
+      tilemap.set_cell.call_deferred(TERRAIN_LAYER_ID, cell)
 ```
 
 ### Conclusion
@@ -91,4 +91,4 @@ TileMaps are very powerful in Godot 4, they're surprisingly better than in Godot
 
 What I was a bit confused about was on how to change a lot of tiles at once without affecting performance, and for now just using a separate thread with `call_deferred` seems to work, but maybe I have to revisit this in the future if I add more layers or elements to the TileMap.
 
-You can see and use the full implementation here: https://gitlab.com/drift-survivors/drift-survivors
+You can see and use the full implementation here: <https://gitlab.com/drift-survivors/drift-survivors>
