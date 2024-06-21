@@ -14,7 +14,7 @@ export default function TagBadge({
     <Link href={href || `/blog/tag/${tag}`}>
       <Badge
         variant="secondary"
-        className="hover:bg-[hsl(var(--tertiary))] transition-colors duration-200 ease-in"
+        className="hover:bg-[hsl(var(--tertiary))] text-sm transition-colors duration-200 ease-in"
       >
         #{tag}
         {children && <span className="ml-2">{children}</span>}
