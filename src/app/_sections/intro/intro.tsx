@@ -5,6 +5,7 @@ import {
   SiLinkedin,
   SiMastodon,
   SiProtonmail,
+  SiX,
 } from "@icons-pack/react-simple-icons";
 
 export default function Intro() {
@@ -30,6 +31,9 @@ export default function Intro() {
             </a>
             <a href="https://mastodon.social/@clotet">
               <SiMastodon size={24} />
+            </a>
+            <a href="https://x.com/clotet_dev" target="_blank">
+              <SiX />
             </a>
             <a href="mailto:roger@clotet.dev">
               <SiProtonmail size={24} />
