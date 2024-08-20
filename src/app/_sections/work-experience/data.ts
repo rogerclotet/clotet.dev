@@ -14,7 +14,8 @@ export const workExperience: Job[] = [
     logo: "/jobs/eventbrite.png",
     url: "https://www.eventbrite.com",
     period: "June 2024 - Present",
-    text: `I'm currently working in the Checkout team as a full-stack engineer.`,
+    text: `I'm currently working in the Checkout team as a full-stack engineer.
+We have a very complex frontend using React and Redux, a backend with Python, and our infrastructure is hosted on AWS.`,
   },
   {
     title: "Senior Software Engineer",
