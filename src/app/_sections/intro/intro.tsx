@@ -1,5 +1,6 @@
 import Logo from "@/app/_components/logo";
 import {
+  SiBluesky,
   SiGithub,
   SiGitlab,
   SiLinkedin,
@@ -32,8 +33,8 @@ export default function Intro() {
             <a href="https://mastodon.social/@clotet">
               <SiMastodon size={24} />
             </a>
-            <a href="https://x.com/clotet_dev" target="_blank">
-              <SiX />
+            <a href="https://bsky.app/profile/clotet.dev" target="_blank">
+              <SiBluesky size={24} />
             </a>
             <a href="mailto:roger@clotet.dev">
               <SiProtonmail size={24} />
