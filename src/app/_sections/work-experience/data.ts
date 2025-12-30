@@ -14,16 +14,15 @@ export const workExperience: Job[] = [
     logo: "/jobs/eventbrite.png",
     url: "https://www.eventbrite.com",
     period: "June 2024 - Present",
-    text: `I'm currently working in the Checkout team as a full-stack engineer.
-We have a very complex frontend using React and Redux, a backend with Python, and our infrastructure is hosted on AWS.`,
+    text: `I'm currently working in the payments team as a full-stack engineer. We own several Python backend services managing payments-related operations, and frontend libraries using React and Redux. Our infrastructure is hosted on AWS. I'm part of the on-call rotation, ensuring the reliability and availability of our services.`,
   },
   {
     title: "Senior Software Engineer",
-    company: "TravelPerk",
-    logo: "/jobs/travelperk.png",
+    company: "Perk",
+    logo: "/jobs/perk.png",
     url: "https://travelperk.com",
     period: "June 2019 - March 2020, November 2021 - April 2024",
-    text: `I worked in TravelPerk as a senior full-stack software engineer, using React for frontend and Python with Django and Tornado for backend.
+    text: `I worked at Perk (TravelPerk at the time) as a senior full-stack software engineer, using React for frontend and Python with Django and Tornado for backend.
 One of my significant contributions was a large effort transitioning the frontend codebase from JavaScript with Flow typing to TypeScript, enhancing maintainability and uncovering latent bugs.
 I also contributed to shared backend projects, significantly improving developer experience and code quality. I actively participated in backend and frontend guilds to promote best practices among developers.
 I was also involved in hiring and onboarding new people to the team, improving and refining processes and interviews.
