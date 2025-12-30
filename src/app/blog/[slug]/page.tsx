@@ -10,7 +10,8 @@ type Params = {
   slug: string;
 };
 
-export default async function BlogPost({ params }: { params: Params }) {
+export default async function BlogPost(props: { params: Promise<Params> }) {
+  const params = await props.params;
   const postData = await getPost(params.slug);
   if (!postData) {
     return redirect("/blog");
@@ -56,9 +57,10 @@ export default async function BlogPost({ params }: { params: Params }) {
 }
 
 export async function generateMetadata(
-  { params }: { params: Params },
+  props: { params: Promise<Params> },
   parent: ResolvingMetadata
 ): Promise<Metadata> {
+  const params = await props.params;
   const postData = await getPost(params.slug);
   if (!postData) {
     return {};

@@ -4,7 +4,8 @@ import { X } from "lucide-react";
 import PreviewList from "../../_components/preview-list";
 import TagBadge from "../../_components/tag-badge";
 
-export default function BlogTag({ params }: { params: { tag: string } }) {
+export default async function BlogTag(props: { params: Promise<{ tag: string }> }) {
+  const params = await props.params
   const posts = getPosts().filter((post) => post.tags.includes(params.tag));
 
   return (

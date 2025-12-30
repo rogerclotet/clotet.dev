@@ -6,7 +6,6 @@ import {
   SiLinkedin,
   SiMastodon,
   SiProtonmail,
-  SiX,
 } from "@icons-pack/react-simple-icons";
 
 export default function Intro() {
