@@ -13,7 +13,7 @@ export default function Intro() {
   return (
     <div className="min-h-dvh flex items-center justify-center p-2 lg:p-6">
       <div className="flex flex-wrap md:gap-6 items-center">
-        <div className="mb-14 flex-grow">
+        <div className="mb-14 grow">
           <Logo width={50} height={50} />
           <h2 className="pt-2 text-3xl">Roger Clotet</h2>
           <h1 className="pb-4 text-6xl text-[hsl(var(--primary-foreground))]">
@@ -42,7 +42,7 @@ export default function Intro() {
           </div>
         </div>
 
-        <div className="text-[hsl(var(--primary-foreground))] text-sm lg:text-lg leading-tight text-right flex-grow">
+        <div className="text-[hsl(var(--primary-foreground))] text-sm lg:text-lg leading-tight text-right grow">
           <p>I&apos;m a dad and a software craftsman based in Girona</p>
           <p>I build stuff for the web and distributed systems</p>
           <p>I love learning, photography, videogames, and driving</p>
