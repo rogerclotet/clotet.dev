@@ -83,8 +83,8 @@ export default function SideNav() {
 								className={cn(
 									"text-[10px] font-mono uppercase transition-all duration-300 cursor-pointer",
 									activeSection === section.id
-										? "text-[hsl(var(--primary-foreground))] font-bold"
-										: "text-[hsl(var(--muted-foreground))] font-normal hover:text-[hsl(var(--foreground))]",
+										? "text-[hsl(var(--primary-foreground))] font-bold scale-[1.15]"
+										: "text-[hsl(var(--muted-foreground))] font-normal scale-100 hover:text-[hsl(var(--foreground))]",
 								)}
 							>
 								{section.label}
