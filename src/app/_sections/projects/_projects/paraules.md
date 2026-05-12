@@ -1,5 +1,5 @@
 ---
-title: Paraules (words)
+title: Paraules
 slug: paraules
 description: A crossword game in Catalan
 category: game
