@@ -1,59 +1,59 @@
-@import '@fontsource/roboto-condensed/400.css' layer(base);
-@import '@fontsource/share-tech-mono/400.css' layer(base);
+@import "@fontsource/roboto-condensed/400.css" layer(base);
+@import "@fontsource/share-tech-mono/400.css" layer(base);
 
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
-  --color-border: hsl(var(--border));
-  --color-input: hsl(var(--input));
-  --color-ring: hsl(var(--ring));
-  --color-background: hsl(var(--background));
-  --color-foreground: hsl(var(--foreground));
+	--color-border: hsl(var(--border));
+	--color-input: hsl(var(--input));
+	--color-ring: hsl(var(--ring));
+	--color-background: hsl(var(--background));
+	--color-foreground: hsl(var(--foreground));
 
-  --color-primary: hsl(var(--primary));
-  --color-primary-foreground: hsl(var(--primary-foreground));
+	--color-primary: hsl(var(--primary));
+	--color-primary-foreground: hsl(var(--primary-foreground));
 
-  --color-secondary: hsl(var(--secondary));
-  --color-secondary-foreground: hsl(var(--secondary-foreground));
+	--color-secondary: hsl(var(--secondary));
+	--color-secondary-foreground: hsl(var(--secondary-foreground));
 
-  --color-destructive: hsl(var(--destructive));
-  --color-destructive-foreground: hsl(var(--destructive-foreground));
+	--color-destructive: hsl(var(--destructive));
+	--color-destructive-foreground: hsl(var(--destructive-foreground));
 
-  --color-muted: hsl(var(--muted));
-  --color-muted-foreground: hsl(var(--muted-foreground));
+	--color-muted: hsl(var(--muted));
+	--color-muted-foreground: hsl(var(--muted-foreground));
 
-  --color-accent: hsl(var(--accent));
-  --color-accent-foreground: hsl(var(--accent-foreground));
+	--color-accent: hsl(var(--accent));
+	--color-accent-foreground: hsl(var(--accent-foreground));
 
-  --color-popover: hsl(var(--popover));
-  --color-popover-foreground: hsl(var(--popover-foreground));
+	--color-popover: hsl(var(--popover));
+	--color-popover-foreground: hsl(var(--popover-foreground));
 
-  --color-card: hsl(var(--card));
-  --color-card-foreground: hsl(var(--card-foreground));
+	--color-card: hsl(var(--card));
+	--color-card-foreground: hsl(var(--card-foreground));
 
-  --radius-lg: var(--radius);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-sm: calc(var(--radius) - 4px);
+	--radius-lg: var(--radius);
+	--radius-md: calc(var(--radius) - 2px);
+	--radius-sm: calc(var(--radius) - 4px);
 
-  --animate-accordion-down: accordion-down 0.2s ease-out;
-  --animate-accordion-up: accordion-up 0.2s ease-out;
+	--animate-accordion-down: accordion-down 0.2s ease-out;
+	--animate-accordion-up: accordion-up 0.2s ease-out;
 
-  @keyframes accordion-down {
-    from {
-      height: 0;
-    }
-    to {
-      height: var(--radix-accordion-content-height);
-    }
-  }
-  @keyframes accordion-up {
-    from {
-      height: var(--radix-accordion-content-height);
-    }
-    to {
-      height: 0;
-    }
-  }
+	@keyframes accordion-down {
+		from {
+			height: 0;
+		}
+		to {
+			height: var(--radix-accordion-content-height);
+		}
+	}
+	@keyframes accordion-up {
+		from {
+			height: var(--radix-accordion-content-height);
+		}
+		to {
+			height: 0;
+		}
+	}
 }
 
 /*
@@ -65,156 +65,156 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
-  }
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: var(--color-gray-200, currentcolor);
+	}
 }
 
 @layer base {
-  :root {
-    --background: 226.15, 19.4%, 13.14%;
-    --foreground: 0 0% 98%;
+	:root {
+		--background: 226.15, 19.4%, 13.14%;
+		--foreground: 0 0% 98%;
 
-    --card: 226.15, 19.4%, 5%;
-    --card-foreground: 0 0% 98%;
+		--card: 226.15, 19.4%, 5%;
+		--card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
+		--popover: 0 0% 3.9%;
+		--popover-foreground: 0 0% 98%;
 
-    --primary: 149.1, 52.76%, 10%;
-    --primary-foreground: 149.1, 52.76%, 50.2%;
+		--primary: 149.1, 52.76%, 10%;
+		--primary-foreground: 149.1, 52.76%, 50.2%;
 
-    --secondary: 54.17, 87.8%, 83.92%;
-    --secondary-foreground: 149.1, 52.76%, 10%;
+		--secondary: 54.17, 87.8%, 83.92%;
+		--secondary-foreground: 149.1, 52.76%, 10%;
 
-    --tertiary: 346, 84.51%, 72.16%;
+		--tertiary: 346, 84.51%, 72.16%;
 
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
+		--muted: 0 0% 14.9%;
+		--muted-foreground: 0 0% 63.9%;
 
-    --accent: 54.17, 87.8%, 83.92%;
-    --accent-foreground: 54.17, 87.8%, 83.92%;
+		--accent: 54.17, 87.8%, 83.92%;
+		--accent-foreground: 54.17, 87.8%, 83.92%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: 0 0% 98%;
 
-    --border: 226.15, 19.4%, 10%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
+		--border: 226.15, 19.4%, 10%;
+		--input: 0 0% 14.9%;
+		--ring: 0 0% 83.1%;
 
-    --radius: 0.5rem;
-  }
+		--radius: 0.5rem;
+	}
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
+	* {
+		@apply border-border;
+	}
 
-  html.sr .load-hidden {
-    visibility: hidden;
-  }
+	html.sr .load-hidden {
+		visibility: hidden;
+	}
 
-  body {
-    @apply bg-background text-foreground;
-    font-family: "Roboto Condensed", sans-serif;
-  }
+	body {
+		@apply bg-background text-foreground;
+		font-family: "Roboto Condensed", sans-serif;
+	}
 
-  a {
-    color: hsl(var(--secondary));
-    transition: color 0.3s;
+	a {
+		color: hsl(var(--secondary));
+		transition: color 0.3s;
 
-    &:hover {
-      color: hsl(var(--tertiary));
-    }
-  }
+		&:hover {
+			color: hsl(var(--tertiary));
+		}
+	}
 
-  pre,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "Share Tech Mono", monospace;
-  }
+	pre,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: "Share Tech Mono", monospace;
+	}
 
-  .monospace {
-    font-family: "Share Tech Mono", monospace;
-  }
+	.monospace {
+		font-family: "Share Tech Mono", monospace;
+	}
 
-  .blog-post,
-  .project {
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    word-break: break-word;
-    hyphens: auto;
+	.blog-post,
+	.project {
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+		word-break: break-word;
+		hyphens: auto;
 
-    h3 {
-      font-size: 2em;
-      margin: 0.5em 0;
-      color: hsl(var(--primary-foreground));
-    }
+		h3 {
+			font-size: 2em;
+			margin: 0.5em 0;
+			color: hsl(var(--primary-foreground));
+		}
 
-    p,
-    li {
-      font-size: 1.125rem;
-      line-height: 1.75rem;
-    }
+		p,
+		li {
+			font-size: 1.125rem;
+			line-height: 1.75rem;
+		}
 
-    p {
-      margin: 1em 0;
-    }
+		p {
+			margin: 1em 0;
+		}
 
-    li {
-      list-style: disc inside;
-      margin: 0.3em 0;
-    }
+		li {
+			list-style: disc inside;
+			margin: 0.3em 0;
+		}
 
-    img {
-      margin: 1.5em auto;
-    }
+		img {
+			margin: 1.5em auto;
+		}
 
-    code {
-      font-size: 0.9em;
-      background-color: hsl(var(--card));
-      padding: 0.2em 0.4em;
-      border-radius: 0.4em;
-      font-family: "Share Tech Mono", monospace;
-    }
+		code {
+			font-size: 0.9em;
+			background-color: hsl(var(--card));
+			padding: 0.2em 0.4em;
+			border-radius: 0.4em;
+			font-family: "Share Tech Mono", monospace;
+		}
 
-    pre {
-      margin: 1.5em 0;
-      padding: 1em 1.5em;
-      font-size: 1.1em;
-      line-height: 1.5rem;
-      border-radius: 0.5em;
-      background-color: hsl(var(--card));
-      white-space: pre-wrap;
-      overflow-x: auto;
+		pre {
+			margin: 1.5em 0;
+			padding: 1em 1.5em;
+			font-size: 1.1em;
+			line-height: 1.5rem;
+			border-radius: 0.5em;
+			background-color: hsl(var(--card));
+			white-space: pre-wrap;
+			overflow-x: auto;
 
-      code {
-        padding: 0;
-      }
-    }
+			code {
+				padding: 0;
+			}
+		}
 
-    table {
-      border-radius: 0.5em;
-      background-color: hsl(var(--card));
-      width: 100%;
+		table {
+			border-radius: 0.5em;
+			background-color: hsl(var(--card));
+			width: 100%;
 
-      th {
-        border-bottom: 0.1em solid hsl(var(--card));
-      }
+			th {
+				border-bottom: 0.1em solid hsl(var(--card));
+			}
 
-      th,
-      td {
-        padding: 0.5em 1em;
-      }
-    }
-  }
+			th,
+			td {
+				padding: 0.5em 1em;
+			}
+		}
+	}
 }

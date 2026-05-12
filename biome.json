@@ -1,0 +1,50 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.4.15/schema.json",
+	"vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
+	"files": { "ignoreUnknown": true },
+	"css": { "parser": { "tailwindDirectives": true }, "formatter": { "enabled": true, "indentStyle": "tab" } },
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab"
+	},
+	"javascript": {
+		"formatter": { "quoteStyle": "double" },
+		"globals": ["React"]
+	},
+	"linter": {
+		"enabled": true,
+		"includes": ["**", "!.next/**", "!out/**", "!build/**", "!next-env.d.ts"],
+		"rules": {
+			"recommended": true,
+			"correctness": {
+				"noNextAsyncClientComponent": "warn",
+				"useExhaustiveDependencies": "warn",
+				"useHookAtTopLevel": "error",
+				"useJsxKeyInIterable": "error"
+			},
+			"performance": {
+				"noImgElement": "warn",
+				"noUnwantedPolyfillio": "warn",
+				"useGoogleFontPreconnect": "warn"
+			},
+			"style": { "noHeadElement": "warn" },
+			"suspicious": {
+				"noDocumentImportInPage": "error",
+				"noHeadImportInDocument": "error",
+				"useGoogleFontDisplay": "warn"
+			},
+			"a11y": {
+				"noAriaUnsupportedElements": "warn",
+				"useAltText": "warn",
+				"useAriaPropsForRole": "warn",
+				"useAriaPropsSupportedByRole": "warn",
+				"useValidAriaProps": "warn",
+				"useValidAriaValues": "warn"
+			}
+		}
+	},
+	"assist": {
+		"enabled": true,
+		"actions": { "source": { "organizeImports": "on" } }
+	}
+}

@@ -1,20 +1,20 @@
 import { cn } from "@/lib/utils";
 
 export default function Title({
-  children,
-  className,
+	children,
+	className,
 }: {
-  children: string;
-  className?: string;
+	children: string;
+	className?: string;
 }) {
-  return (
-    <h1
-      className={cn(
-        "text-[hsl(var(--primary-foreground))] text-4xl md:text-6xl",
-        className
-      )}
-    >
-      {children}
-    </h1>
-  );
+	return (
+		<h1
+			className={cn(
+				"text-[hsl(var(--primary-foreground))] text-4xl md:text-6xl",
+				className,
+			)}
+		>
+			{children}
+		</h1>
+	);
 }
