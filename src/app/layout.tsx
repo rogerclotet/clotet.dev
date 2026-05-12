@@ -6,7 +6,7 @@ import { CSPostHogProvider } from "./providers";
 export const metadata: Metadata = {
   title: "Roger Clotet",
   description:
-    "I'm a dad and a software craftsman based in Girona. I build stuff for the web and distributed systems. I love learning, photography, videogames, and driving",
+    "I'm a dad and a software engineer based in Girona. I build stuff for the web and distributed systems. I love learning, photography, videogames, and driving",
   icons: [{ rel: "icon", url: "/favicon.png" }],
   alternates: {
     canonical: "https://clotet.dev",

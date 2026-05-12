@@ -1,10 +1,8 @@
 import Logo from "@/app/_components/logo";
 import {
-  SiBluesky,
   SiGithub,
   SiGitlab,
   SiLinkedin,
-  SiMastodon,
   SiProtonmail,
 } from "@icons-pack/react-simple-icons";
 
@@ -29,20 +27,14 @@ export default function Intro() {
             <a href="https://linkedin.com/in/rogerclotet" target="_blank">
               <SiLinkedin size={24} />
             </a>
-            <a href="https://mastodon.social/@clotet">
-              <SiMastodon size={24} />
-            </a>
-            <a href="https://bsky.app/profile/clotet.dev" target="_blank">
-              <SiBluesky size={24} />
-            </a>
-            <a href="mailto:roger@clotet.dev">
+<a href="mailto:roger@clotet.dev">
               <SiProtonmail size={24} />
             </a>
           </div>
         </div>
 
         <div className="text-[hsl(var(--primary-foreground))] text-sm lg:text-lg leading-tight text-right grow">
-          <p>I&apos;m a dad and a software craftsman based in Girona</p>
+          <p>I&apos;m a dad and a software engineer based in Girona</p>
           <p>I build stuff for the web and distributed systems</p>
           <p>I love learning, photography, videogames, and driving</p>
         </div>
