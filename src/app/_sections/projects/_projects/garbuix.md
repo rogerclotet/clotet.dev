@@ -1,11 +1,11 @@
 ---
-title: Paraules
-slug: paraules
+title: Garbuix!
+slug: garbuix
 description: A crossword game in Catalan
 category: game
-image: /projects/paraules.png
-link: https://paraules.clotet.dev
-repo: https://gitlab.com/rogerclotet/paraules
+image: /projects/garbuix.png
+link: https://garbuix.app
+repo: https://gitlab.com/rogerclotet/garbuix
 date: 2025-12-28
 ---
 
@@ -17,4 +17,4 @@ I used an open dictionary from [TermCat](https://www.termcat.cat/) with the word
 
 I used TanStack Start as a framework, to learn a bit more about its features and how it can be used to build web applications. It's a really simple project, but it's a good starting point to learn how to use technologies I'm not that familiar with.
 
-You can play it [here](https://paraules.clotet.dev). How many words can you guess?
+You can play it [here](https://garbuix.app). How many words can you guess?
