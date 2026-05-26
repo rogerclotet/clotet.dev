@@ -17,12 +17,16 @@ import ProjectPreview from "./project-preview";
 export default function ProjectDialog({
 	project,
 	className,
+	open,
+	onOpenChange,
 }: {
 	project: Project;
 	className?: string;
+	open?: boolean;
+	onOpenChange?: (open: boolean) => void;
 }) {
 	return (
-		<Dialog>
+		<Dialog open={open} onOpenChange={onOpenChange}>
 			<DialogTrigger asChild>
 				<div>
 					<ProjectPreview
