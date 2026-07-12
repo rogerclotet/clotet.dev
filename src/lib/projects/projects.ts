@@ -15,6 +15,7 @@ export type Project = {
 	link: string | null;
 	repo: string | null;
 	date: Date;
+	featured: boolean;
 	content: string;
 };
 
@@ -49,10 +50,14 @@ export function getProjects(): Project[] {
 				link: matterResult.data.link,
 				repo: matterResult.data.repo,
 				date: matterResult.data.date,
+				featured: matterResult.data.featured ?? false,
 				content: htmlContent,
 			};
 		})
 		.sort((a, b) => {
+			if (a.featured !== b.featured) {
+				return a.featured ? -1 : 1;
+			}
 			if (a.date < b.date) {
 				return 1;
 			} else {

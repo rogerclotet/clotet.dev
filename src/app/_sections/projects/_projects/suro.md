@@ -7,6 +7,7 @@ image: /projects/suro.png
 link: https://suro.clotet.dev
 repo: https://gitlab.com/rogerclotet/suro
 date: 2024-06-23
+featured: true
 ---
 
 A shared space app I started back in 2020 and have rewritten from scratch twice already. Hopefully this is the last time, since it's at a point where we're actively using it with several groups and it's evolving based on feedback from real users. It has been received very well by the people I've shared it with, and I can see myself actively working on it for years to come.
