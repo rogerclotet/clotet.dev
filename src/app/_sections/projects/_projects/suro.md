@@ -5,7 +5,7 @@ description: A shared space for the people you share your daily life with
 category: mobileapp
 image: /projects/suro.png
 link: https://suroapp.cat
-repo: https://gitlab.com/rogerclotet/suro
+repo: https://github.com/rogerclotet/suro
 date: 2024-06-23
 featured: true
 ---
