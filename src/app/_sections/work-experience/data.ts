@@ -10,11 +10,21 @@ export type Job = {
 export const workExperience: Job[] = [
 	{
 		title: "Senior Software Engineer",
+		company: "Pensero",
+		logo: "/jobs/pensero.png",
+		url: "https://pensero.ai",
+		period: "June 2026 - Present",
+		text: `I'm currently working as a senior software engineer at Pensero, building an AI-powered engineering performance platform that gives leaders objective visibility into delivery, quality, and AI impact across their organization.`,
+	},
+	{
+		title: "Senior Software Engineer",
 		company: "Eventbrite",
 		logo: "/jobs/eventbrite.png",
 		url: "https://www.eventbrite.com",
-		period: "June 2024 - Present",
-		text: `I'm currently working in the payments team as a full-stack engineer. We own several Python backend services managing payments-related operations, and frontend libraries using React and Redux. Our infrastructure is hosted on AWS. I'm part of the on-call rotation, ensuring the reliability and availability of our services.`,
+		period: "June 2024 - June 2026",
+		text: `I worked in the payments team as a full-stack engineer. We owned several Python backend services managing payments-related operations, and frontend libraries using React and Redux. Our infrastructure was hosted on AWS.
+I contributed to the implementation of Stripe as a payment provider and BNPL methods, which significantly improved high value ticket purchases.
+I was part of the on-call rotation, ensuring the reliability and availability of our services.`,
 	},
 	{
 		title: "Senior Software Engineer",
