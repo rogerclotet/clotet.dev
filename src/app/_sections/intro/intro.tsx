@@ -33,18 +33,18 @@ export default function Intro() {
 
 					<div className="flex gap-4">
 						<a
-							href="https://gitlab.com/rogerclotet"
-							target="_blank"
-							rel="noopener"
-						>
-							<SiGitlab size={24} />
-						</a>
-						<a
 							href="https://github.com/rogerclotet"
 							target="_blank"
 							rel="noopener"
 						>
 							<SiGithub size={24} />
+						</a>
+						<a
+							href="https://gitlab.com/rogerclotet"
+							target="_blank"
+							rel="noopener"
+						>
+							<SiGitlab size={24} />
 						</a>
 						<a
 							href="https://linkedin.com/in/rogerclotet"
