@@ -1,4 +1,4 @@
-import { SiGitlab } from "@icons-pack/react-simple-icons";
+import { SiGithub, SiGitlab } from "@icons-pack/react-simple-icons";
 import { ExternalLink } from "lucide-react";
 import type { Project } from "@/lib/projects/projects";
 
@@ -23,7 +23,11 @@ export default function ProjectLinks({ project }: { project: Project }) {
 					rel="noopener noreferrer"
 					className="flex items-center gap-2"
 				>
-					<SiGitlab size={16} />
+					{project.repo.includes("github.com") ? (
+						<SiGithub size={16} />
+					) : (
+						<SiGitlab size={16} />
+					)}
 					Source code
 				</a>
 			)}
