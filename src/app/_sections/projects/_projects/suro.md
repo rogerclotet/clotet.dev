@@ -2,9 +2,9 @@
 title: Suro
 slug: suro
 description: A shared space for the people you share your daily life with
-category: webapp
+category: mobileapp
 image: /projects/suro.png
-link: https://suro.clotet.dev
+link: https://suroapp.cat
 repo: https://gitlab.com/rogerclotet/suro
 date: 2024-06-23
 featured: true

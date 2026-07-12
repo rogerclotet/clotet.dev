@@ -1,4 +1,4 @@
-import { Gamepad2, Globe, PanelsTopLeft } from "lucide-react";
+import { Gamepad2, Globe, PanelsTopLeft, Smartphone } from "lucide-react";
 import type { Project } from "@/lib/projects/projects";
 
 export default function CategoryIcon({
@@ -11,6 +11,8 @@ export default function CategoryIcon({
 			return <Globe />;
 		case "webapp":
 			return <PanelsTopLeft />;
+		case "mobileapp":
+			return <Smartphone />;
 		case "game":
 			return <Gamepad2 />;
 	}

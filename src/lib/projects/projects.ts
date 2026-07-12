@@ -10,7 +10,7 @@ export type Project = {
 	title: string;
 	slug: string;
 	description: string;
-	category: "website" | "webapp" | "game";
+	category: "website" | "webapp" | "mobileapp" | "game";
 	image: string;
 	link: string | null;
 	repo: string | null;
