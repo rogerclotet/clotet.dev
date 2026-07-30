@@ -5,7 +5,7 @@ description: A crossword game in Catalan
 category: game
 image: /projects/garbuix.png
 link: https://garbuix.app
-repo: https://gitlab.com/rogerclotet/garbuix
+repo: https://github.com/rogerclotet/garbuix
 date: 2025-12-28
 ---
 
