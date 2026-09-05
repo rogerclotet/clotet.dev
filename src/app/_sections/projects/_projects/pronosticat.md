@@ -9,8 +9,8 @@ repo: https://github.com/rogerclotet/pronosticat
 date: 2026-08-01
 ---
 
-A PWA to predict football results with friends. Each matchday brings a board of 5 challenges — the exact score, the biggest margin of victory, the whitewash, the goal machine — and each square can only be spent once, betting it on a match or a team. Supports LaLiga, Premier League, and Champions League.
+An installable web app for predicting football results with friends. Each matchday gives you a board of five challenges, including the exact score, the biggest margin of victory, the whitewash, and the goal machine. You can use each square once by assigning it to a match or team. The game supports LaLiga, the Premier League, and the Champions League.
 
-Playing a square is free, but once you commit it to a match or team you can't take it back, so every pick is a small risk-reward decision. Results sync automatically, and a group leaderboard tracks who's calling it best across the season.
+Playing a square is free, but you can't change your pick once you've made it. Results update automatically, and a group leaderboard tracks everyone's predictions across the season.
 
-Built with Next.js and Tailwind CSS for a mobile-first, brutalist design, Drizzle ORM with PostgreSQL, Better Auth for Google OAuth and magic-link sign-in, next-intl for the Catalan localization, and football-data.org for match data. Deployed via Docker with a GitHub Actions pipeline that runs lint, typecheck, and tests before pushing straight to production.
+I built it with Next.js and Tailwind CSS, with a brutalist design aimed at mobile screens. It uses Drizzle ORM with PostgreSQL, Better Auth for Google and magic-link sign-in, next-intl for Catalan localization, and football-data.org for match data. A GitHub Actions pipeline runs lint, type checks, and tests before deploying to production with Docker.

@@ -11,13 +11,8 @@ date: 2020-04-28
 
 A small puzzle game for mobile. The first game I published on the Google Play Store.
 
-The gameplay is inspired by other puzzle games I tried before, but were full of ads and in-app purchases. I started 
-learning game development some time before, took part in a game jam, and wanted to make a simple game to "test my 
-skills", and this seemed like a good way of doing it.
+I wanted to make a puzzle game like the ones I'd played, without the ads and in-app purchases. I'd started learning game development and taken part in a game jam, so this felt like a good way to put what I'd learned into practice.
 
-It was made with Unity, art was created with Aseprite, and has local saves for high scores, last games and current 
-game state, localization in Catalan, English, and Spanish, and different color schemes to choose from.
+I built it with Unity and created the art with Aseprite. It saves high scores, recent games, and your current game locally. You can choose between several color schemes and play in Catalan, English, or Spanish.
 
-You can install and 
-[play the game for free on Android](https://play.google.com/store/apps/details?id=dev.clotet.Blocs&utm_source=clotet.dev&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1), 
-or play now from mobile or desktop on https://blocs.clotet.dev.
+You can [play for free on Android](https://play.google.com/store/apps/details?id=dev.clotet.Blocs&utm_source=clotet.dev&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1) or [in your browser](https://blocs.clotet.dev) on mobile or desktop.

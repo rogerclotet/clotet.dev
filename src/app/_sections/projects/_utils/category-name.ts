@@ -5,9 +5,9 @@ export function getCategoryName(category: Project["category"]) {
 		case "website":
 			return "Website";
 		case "webapp":
-			return "WebApp";
+			return "Web app";
 		case "mobileapp":
-			return "Mobile App";
+			return "Mobile app";
 		case "game":
 			return "Game";
 	}

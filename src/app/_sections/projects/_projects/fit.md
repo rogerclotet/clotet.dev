@@ -9,6 +9,4 @@ repo: https://gitlab.com/rogerclotet/fit
 date: 2026-05-12
 ---
 
-A nutrition and weight tracking app built with open databases for foods and ingredients. It helps you track your nutrition intake and monitor your weight goals over time.
-
-The app leverages open food databases to provide accurate nutritional information for a wide variety of foods and ingredients, making it easy to log your meals and track your progress toward your health goals.
+A nutrition and weight tracking app that uses open food databases. You can log meals, check nutritional information for foods and ingredients, and track your weight over time.

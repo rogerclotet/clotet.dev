@@ -61,8 +61,8 @@ export default function Intro() {
 
 				<div className="text-[hsl(var(--primary-foreground))] text-sm lg:text-lg leading-tight text-right grow">
 					<p>I&apos;m a dad and a software engineer based in Girona</p>
-					<p>I build stuff for the web and distributed systems</p>
-					<p>I love learning, photography, videogames, and driving</p>
+					<p>I build web apps and distributed systems</p>
+					<p>I love learning, photography, video games, and driving</p>
 				</div>
 			</div>
 		</div>

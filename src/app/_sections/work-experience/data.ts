@@ -14,7 +14,7 @@ export const workExperience: Job[] = [
 		logo: "/jobs/pensero.png",
 		url: "https://pensero.ai",
 		period: "June 2026 - Present",
-		text: `I'm currently working as a senior software engineer at Pensero, building an AI-powered engineering performance platform that gives leaders objective visibility into delivery, quality, and AI impact across their organization.`,
+		text: `I build an AI-powered engineering performance platform at Pensero, helping leaders understand delivery, code quality, and the impact of AI across their organization.`,
 	},
 	{
 		title: "Senior Software Engineer",
@@ -22,9 +22,9 @@ export const workExperience: Job[] = [
 		logo: "/jobs/eventbrite.png",
 		url: "https://www.eventbrite.com",
 		period: "June 2024 - June 2026",
-		text: `I worked in the payments team as a full-stack engineer. We owned several Python backend services managing payments-related operations, and frontend libraries using React and Redux. Our infrastructure was hosted on AWS.
-I contributed to the implementation of Stripe as a payment provider and BNPL methods, which significantly improved high value ticket purchases.
-I was part of the on-call rotation, ensuring the reliability and availability of our services.`,
+		text: `I worked on the payments team as a full-stack engineer. We owned Python services for payment operations and frontend libraries built with React and Redux, running on AWS.
+I helped integrate Stripe and buy now, pay later payment methods to support purchases of higher-priced tickets.
+I also took part in the on-call rotation to keep our services running reliably.`,
 	},
 	{
 		title: "Senior Software Engineer",
@@ -32,10 +32,10 @@ I was part of the on-call rotation, ensuring the reliability and availability of
 		logo: "/jobs/perk.png",
 		url: "https://travelperk.com",
 		period: "June 2019 - March 2020, November 2021 - April 2024",
-		text: `I worked at Perk (TravelPerk at the time) as a senior full-stack software engineer, using React for frontend and Python with Django and Tornado for backend.
-One of my significant contributions was a large effort transitioning the frontend codebase from JavaScript with Flow typing to TypeScript, enhancing maintainability and uncovering latent bugs.
-I also contributed to shared backend projects, significantly improving developer experience and code quality. I actively participated in backend and frontend guilds to promote best practices among developers.
-I was also involved in hiring and onboarding new people to the team, improving and refining processes and interviews.
+		text: `I worked at Perk, then called TravelPerk, as a senior full-stack software engineer. I used React on the frontend and Python with Django and Tornado on the backend.
+I helped migrate the frontend codebase from JavaScript with Flow to TypeScript, making it easier to maintain and finding bugs along the way.
+I contributed to shared backend projects and worked with the frontend and backend guilds to improve development practices and code quality.
+I also helped hire and onboard new teammates and improve our interview process.
 I left to improve my work-life balance and rejoined when remote work became an option.`,
 	},
 	{
@@ -44,9 +44,8 @@ I left to improve my work-life balance and rejoined when remote work became an o
 		logo: "/jobs/typeform.png",
 		url: "https://typeform.com",
 		period: "March 2020 - November 2021",
-		text: `I was the sole backend engineer in a team that was responsible for the form building aspect of the company.
-My responsibilities included updating and maintaining several backend services, while also adding new features to enhance our offerings. Despite being primarily focused on backend development, I also contributed to parts of the frontend, ensuring a seamless user experience.
-My efforts played a significant role in improving the developer experience and elevating the overall code quality.`,
+		text: `I was the sole backend engineer on the team responsible for form building. I maintained backend services, added features, and contributed to the frontend when needed.
+I also worked on improving the developer experience and code quality.`,
 	},
 	{
 		title: "Senior Software Engineer",
@@ -54,8 +53,8 @@ My efforts played a significant role in improving the developer experience and e
 		logo: "/jobs/socialpoint.png",
 		url: "https://www.socialpoint.es",
 		period: "June 2012 - May 2019",
-		text: `At Socialpoint I developed the server side of highly successful mobile games, catering to millions of daily active users. I worked in a 5-person team for 5 years and later in a 2-person team for a year.
-One of my significant contributions was leading a project that introduced the first real-time backend part of our system developed in Go, and improving the continuous deployment strategy for real-time servers.
-I encountered numerous challenges, primarily related to concurrency and high availability. I primarily used PHP (with Symfony) and Go in AWS.`,
+		text: `At Socialpoint, I developed the server side of mobile games with millions of daily active users. I spent five years on a team of five and later a year on a team of two.
+I led the project to introduce our first real-time backend component in Go and improved continuous deployment for the real-time servers.
+Much of my work involved concurrency and high availability, using PHP with Symfony and Go on AWS.`,
 	},
 ];
