@@ -3,6 +3,7 @@
 import { SiGithub, SiGitlab } from "@icons-pack/react-simple-icons";
 import { ExternalLink } from "lucide-react";
 import type { SyntheticEvent } from "react";
+import { useTranslations } from "@/lib/i18n/provider";
 import type { Project } from "@/lib/projects/projects";
 
 const ignoreTileClick = (event: SyntheticEvent) => {
@@ -10,6 +11,7 @@ const ignoreTileClick = (event: SyntheticEvent) => {
 };
 
 export default function ProjectLinks({ project }: { project: Project }) {
+	const t = useTranslations();
 	return (
 		<div className="flex flex-row items-center gap-6">
 			{project.link && (
@@ -22,7 +24,7 @@ export default function ProjectLinks({ project }: { project: Project }) {
 					onClick={ignoreTileClick}
 				>
 					<ExternalLink />
-					Visit
+					{t.visit}
 				</a>
 			)}
 			{project.repo && (
@@ -39,7 +41,7 @@ export default function ProjectLinks({ project }: { project: Project }) {
 					) : (
 						<SiGitlab size={16} />
 					)}
-					Source code
+					{t.sourceCode}
 				</a>
 			)}
 		</div>

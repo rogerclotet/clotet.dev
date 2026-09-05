@@ -1,32 +1,39 @@
 import type { Metadata } from "next";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { LocaleProvider } from "@/lib/i18n/provider";
+import { getLocale, getTranslations } from "@/lib/i18n/server";
 import "./globals.css";
 import { CSPostHogProvider } from "./providers";
 
-export const metadata: Metadata = {
-	title: "Roger Clotet",
-	description:
-		"I'm a dad and a software engineer based in Girona. I build web apps and distributed systems. I love learning, photography, video games, and driving.",
-	icons: [{ rel: "icon", url: "/favicon.png" }],
-	alternates: {
-		canonical: "https://clotet.dev",
-	},
-};
+export async function generateMetadata(): Promise<Metadata> {
+	const t = await getTranslations();
+	return {
+		title: "Roger Clotet",
+		description: `${t.bio}. ${t.building}. ${t.interests}.`,
+		icons: [{ rel: "icon", url: "/favicon.png" }],
+		alternates: {
+			canonical: "https://clotet.dev",
+		},
+	};
+}
 
-export default function RootLayout({
+export default async function RootLayout({
 	children,
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
+	const locale = await getLocale();
 	return (
-		<html lang="en" className="sr">
-			<CSPostHogProvider>
-				<body>
-					<TooltipProvider>
-						<main>{children}</main>
-					</TooltipProvider>
-				</body>
-			</CSPostHogProvider>
+		<html lang={locale} className="sr">
+			<body>
+				<LocaleProvider locale={locale}>
+					<CSPostHogProvider>
+						<TooltipProvider>
+							<main>{children}</main>
+						</TooltipProvider>
+					</CSPostHogProvider>
+				</LocaleProvider>
+			</body>
 		</html>
 	);
 }

@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
+import { getTranslations } from "@/lib/i18n/server";
 import Header from "../_components/header";
 
-export const metadata: Metadata = {
-	title: "Dev Learnings - Roger Clotet",
-	description: "My notes on software development",
-	alternates: {
-		canonical: "https://clotet.dev/blog",
-	},
-};
+export async function generateMetadata(): Promise<Metadata> {
+	const t = await getTranslations();
+	return {
+		title: `${t.blogTitle} - Roger Clotet`,
+		description: t.blogDescription,
+		alternates: {
+			canonical: "https://clotet.dev/blog",
+		},
+	};
+}
 
 export default function BlogLayout({
 	children,

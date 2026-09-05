@@ -1,5 +1,4 @@
 import Header from "./_components/header";
-import HiddenScroll from "./_components/hidden-scroll";
 import SideNav from "./_components/side-nav";
 import Intro from "./_sections/intro/intro";
 import Outro from "./_sections/outro/outro";
@@ -9,9 +8,7 @@ import WorkExperience from "./_sections/work-experience/work-experience";
 export default function Home() {
 	return (
 		<>
-			<HiddenScroll>
-				<Header />
-			</HiddenScroll>
+			<Header />
 
 			<SideNav />
 

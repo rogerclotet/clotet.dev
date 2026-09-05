@@ -1,10 +1,11 @@
 import fs from "node:fs";
 import path from "node:path";
-import matter from "gray-matter";
 import rehypeStringify from "rehype-stringify";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import { unified } from "unified";
+import type { Locale } from "@/lib/i18n/locale";
+import { readLocalizedMarkdown } from "@/lib/i18n/markdown";
 
 export type Project = {
 	title: string;
@@ -24,15 +25,16 @@ const projectsDirectory = path.join(
 	"src/app/_sections/projects/_projects",
 );
 
-export function getProjects(): Project[] {
+export function getProjects(locale: Locale = "en"): Project[] {
 	const fileNames = fs.readdirSync(projectsDirectory);
 	const allProjectsData = fileNames
 		.filter((fileName) => fileName.endsWith(".md"))
 		.map((fileName) => {
-			const fullPath = path.join(projectsDirectory, fileName);
-			const fileContents = fs.readFileSync(fullPath, "utf8");
-
-			const matterResult = matter(fileContents);
+			const matterResult = readLocalizedMarkdown(
+				projectsDirectory,
+				fileName,
+				locale,
+			);
 
 			const processedContent = unified()
 				.use(remarkParse)

@@ -11,6 +11,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "biome check src/",
+    "test": "bun test src/",
     "format": "biome format --write src/"
   },
   "dependencies": {

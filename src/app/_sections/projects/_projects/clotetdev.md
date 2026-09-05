@@ -10,4 +10,4 @@ date: 2024-06-21
 
 This is the website you're browsing right now. I built it with Next.js, React, and Tailwind CSS to share my projects and work experience.
 
-The site is statically generated at build time, with project descriptions written in Markdown.
+Project descriptions are written in Markdown, and the site is rendered in your preferred language.

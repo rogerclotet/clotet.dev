@@ -1,5 +1,6 @@
 import { Mail } from "lucide-react";
 import Title from "@/app/_components/title";
+import { getTranslations } from "@/lib/i18n/server";
 import { cn } from "@/lib/utils";
 
 function MailLink({ className }: { className?: string }) {
@@ -16,15 +17,16 @@ function MailLink({ className }: { className?: string }) {
 	);
 }
 
-export default function Outro() {
+export default async function Outro() {
+	const t = await getTranslations();
 	return (
 		<div className="min-h-dvh flex flex-col justify-center p-2 lg:p-6">
-			<Title className="mb-8">That&apos;s it!</Title>
-			<p>I&apos;m always working on side projects and open to collaborating.</p>
+			<Title className="mb-8">{t.outro}</Title>
+			<p>{t.collaboration}</p>
 
 			<MailLink className="hidden lg:flex" />
 
-			<p>Feel free to get in touch!</p>
+			<p>{t.getInTouch}</p>
 
 			<MailLink className="flex lg:hidden mt-4" />
 		</div>

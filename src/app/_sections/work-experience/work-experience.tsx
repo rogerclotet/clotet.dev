@@ -1,14 +1,17 @@
 import { FileDown } from "lucide-react";
 import Title from "@/app/_components/title";
+import { getLocale, getTranslations } from "@/lib/i18n/server";
 import { cn } from "@/lib/utils";
 import JobDetails from "./components/job-details";
-import { workExperience } from "./data";
+import { getWorkExperience } from "./data";
 
-export default function WorkExperience() {
+export default async function WorkExperience() {
+	const t = await getTranslations();
+	const workExperience = getWorkExperience(await getLocale());
 	return (
 		<div>
 			<div className="flex flex-wrap gap-4 justify-between items-baseline py-4 border-[hsl(var(--primary-foreground))] border-b-2 mr-4">
-				<Title className="pl-6">Work experience</Title>
+				<Title className="pl-6">{t.workExperience}</Title>
 				<a
 					href="https://gitlab.com/rogerclotet/resume/-/raw/master/resume.pdf"
 					target="_blank"
@@ -16,7 +19,7 @@ export default function WorkExperience() {
 					rel="noopener"
 				>
 					<FileDown />
-					Resume
+					{t.resume}
 				</a>
 			</div>
 

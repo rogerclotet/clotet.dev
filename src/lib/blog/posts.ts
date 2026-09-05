@@ -1,18 +1,19 @@
 import fs from "node:fs";
 import path from "node:path";
-import matter from "gray-matter";
 import { common } from "lowlight";
 import rehypeHighlight from "rehype-highlight";
 import rehypeStringify from "rehype-stringify";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import { unified } from "unified";
+import type { Locale } from "@/lib/i18n/locale";
+import { readLocalizedMarkdown } from "@/lib/i18n/markdown";
 import gdscript from "./gdscript";
 
 const postsDirectory = path.join(process.cwd(), "src/app/blog/_posts");
 
-export async function getPost(slug: string) {
-	const post = getPosts().find((post) => post.slug === slug);
+export async function getPost(slug: string, locale: Locale = "en") {
+	const post = getPosts(locale).find((post) => post.slug === slug);
 
 	if (!post) {
 		return null;
@@ -26,7 +27,7 @@ export async function getPost(slug: string) {
 		.process(post.content);
 	const htmlContent = String(processedContent);
 
-	const related = getPosts()
+	const related = getPosts(locale)
 		.filter(
 			(p) =>
 				p.slug !== post.slug && post.tags.some((tag) => p.tags.includes(tag)),
@@ -42,15 +43,16 @@ export async function getPost(slug: string) {
 	};
 }
 
-export function getPosts() {
+export function getPosts(locale: Locale = "en") {
 	const fileNames = fs.readdirSync(postsDirectory);
 	const allPostsData = fileNames
 		.filter((fileName) => fileName.endsWith(".md"))
 		.map((fileName) => {
-			const fullPath = path.join(postsDirectory, fileName);
-			const fileContents = fs.readFileSync(fullPath, "utf8");
-
-			const matterResult = matter(fileContents);
+			const matterResult = readLocalizedMarkdown(
+				postsDirectory,
+				fileName,
+				locale,
+			);
 
 			return {
 				title: matterResult.data.title as string,
