@@ -1,25 +1,25 @@
 ---
-title: Suspense in NextJS server components
-description: Using Suspense to display loading states in NextJS server components
+title: Suspense in Next.js server components
+description: Using Suspense to display loading states in Next.js server components
 slug: suspense-nextjs-server-components
 tags: ["react", "nextjs", "suspense", "frontend"]
 date: 2024-06-21
 ---
 
-Ever since `Suspense` for data fetching was introduced in React 18, I tried to use it in simple ways, but util now I haven't fully understood how.
+I've been trying to understand how to use `Suspense` for data fetching since React 18. This example helped it click.
 
-In NextJS App Router you have two ways of displaying loading states in pages generated on the server:
+In the Next.js App Router you have two ways of displaying loading states in pages generated on the server:
 
-- Adding a `loading.tsx` file next to `page.tsx`. This is the simpler way, and NextJS will automatically render it until the page is ready.
-- Using `Suspense` in your components wrapping the different suspense boundaries yourself. This is a bit more complex but it gives you more control and allows to just show a loading state in part of the page instead of fully switching to it.
+- Adding a `loading.tsx` file next to `page.tsx`. This is the simpler way, and Next.js will automatically render it until the page is ready.
+- Wrapping components in `Suspense` boundaries yourself. This takes more work, but lets you show a loading state for part of the page.
 
-You can read a bit more about this in the [NextJS documentation](https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming#instant-loading-states).
+You can read a bit more about this in the [Next.js documentation](https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming#instant-loading-states).
 
-### Case example
+### Example
 
-Where this becomes really useful is when you have an async component rendered from the server, for example fetching data from a database, and you want to avoid locking the browser until the server finishes rendering the page.
+This is useful when an async server component fetches data, for example from a database, and you want to show a loading state while it renders.
 
-To show a really simple example, let's say we have a `SlowComponent` that does something asynchronously. In the example I have implemented it by waiting a random amount of time (between 0 and 3 seconds) before rendering the component.
+For this example, `SlowComponent` waits a random amount of time between zero and three seconds before rendering.
 
 ```tsx
 import { setTimeout } from "timers/promises";
@@ -65,13 +65,13 @@ If we add a suspense boundary around the slow components being rendered, we can 
 
 ![Recording of the page waiting with skeleton components until the slow components render](/blog/6_suspense_example.gif)
 
-In this example this is the full page, but you can do a lot more interesting stuff by having small suspense boundaries in parts of the page.
+This example wraps the full page, but you can place smaller suspense boundaries around individual sections.
 
-Having a single suspense boundary for the 10 components makes it be in a loading state until all of them are done rendering. If we wanted to display them as soon as they finished rendering we could have suspense boundaries for each of them, but this tends to be a bad user experience in the case of lists.
+A single suspense boundary keeps all ten components in a loading state until they finish rendering. Separate boundaries would let each component appear as soon as it is ready, though I find that distracting in lists.
 
 ### Note
 
-My first approach was to just add a `Suspense` component in the same page I was fetching the data from, assuming some kind of magic in NextJS that would stream the components inside the suspense boundary as they were rendered. This isn't the case. You need to have separate async components that are rendered on the server, and then wrapped in a suspense boundary in the page or a separate component.
+My first approach was to just add a `Suspense` component in the same page I was fetching the data from, assuming some kind of magic in Next.js that would stream the components inside the suspense boundary as they were rendered. This isn't the case. You need to have separate async components that are rendered on the server, and then wrapped in a suspense boundary in the page or a separate component.
 
 ### Source code
 

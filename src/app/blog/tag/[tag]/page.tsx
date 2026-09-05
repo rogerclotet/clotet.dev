@@ -13,7 +13,7 @@ export default async function BlogTag(props: {
 	return (
 		<>
 			<Title>Dev Learnings</Title>
-			<h2 className="text-2xl mt-2">My notes about software development</h2>
+			<h2 className="text-2xl mt-2">My notes on software development</h2>
 			<div className="flex items-center gap-2 my-8">
 				Filtered by
 				<TagBadge tag={params.tag} href="/blog">

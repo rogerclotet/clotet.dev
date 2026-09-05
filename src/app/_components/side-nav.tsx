@@ -69,7 +69,7 @@ export default function SideNav() {
 				))}
 			</div>
 
-			{/* Mobile: bottom gradient bar — mirrors header treatment */}
+			{/* Mobile: bottom gradient bar matching the header */}
 			<div className="fixed bottom-0 left-0 right-0 z-10 flex lg:hidden justify-center items-end pb-3 pt-10 bg-linear-to-t from-[hsl(var(--background))] from-30% to-transparent">
 				<div className="flex items-center gap-3">
 					{sections.map((section, i) => (

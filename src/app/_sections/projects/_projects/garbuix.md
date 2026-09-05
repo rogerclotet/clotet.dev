@@ -9,12 +9,12 @@ repo: https://github.com/rogerclotet/garbuix
 date: 2025-12-28
 ---
 
-A crossword mini-game, inspired by games like [Wordle](https://www.nytimes.com/games/wordle/) and [Paraulogic](https://www.vilaweb.cat/paraulogic/).
+A small crossword game in Catalan, inspired by [Wordle](https://www.nytimes.com/games/wordle/) and [Paraulogic](https://www.vilaweb.cat/paraulogic/).
 
-A set of random words are chosen per day (with a seeded random) from 6 random letters, and a crossword is generated with those words. The player has to guess the words in the crossword, counting the number of attempts. They also have up to 3 hints that show a letter from the ones that are not yet revealed.
+Each day, the game generates a crossword from words formed with six randomly chosen letters. Guess the words in as few attempts as possible, with up to three hints that each reveal a letter. A seeded random generator keeps the daily puzzle the same for everyone.
 
-I used an open dictionary from [TermCat](https://www.termcat.cat/) with the words from [IATE](https://iate.europa.eu/) as a base, keeping only words without spaces or punctuation that are not too short (3 or more letters).
+The words come from an open [TermCat](https://www.termcat.cat/) dictionary based on [IATE](https://iate.europa.eu/). I kept words with at least three letters and no spaces or punctuation.
 
-I used TanStack Start as a framework, to learn a bit more about its features and how it can be used to build web applications. It's a really simple project, but it's a good starting point to learn how to use technologies I'm not that familiar with.
+I built it with TanStack Start to learn the framework through a small project.
 
-You can play it [here](https://garbuix.app). How many words can you guess?
+[Play Garbuix!](https://garbuix.app) How many words can you guess?

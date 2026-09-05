@@ -1,21 +1,20 @@
 ---
-title: "Multiplayer minesweeper with socket.io"
-description: Introduction to the tech to implement a multiplayer minesweeper game using javascript and real time technologies
+title: "Multiplayer Minesweeper with Socket.IO"
+description: How I built a multiplayer Minesweeper game with JavaScript and Socket.IO
 slug: multiplayer-minesweeper-with-socket-io
 tags: ["frontend", "backend", "javascript", "nodejs", "react", "socket.io"]
 date: 2021-05-11
 ---
 
-The goal of this project was to learn some new technologies (new for me, of course) while completing a simple project
-from end to end.
+I built this project to learn technologies I hadn't used before and finish a small game from end to end.
 
 I wanted to make something in real time to try out and learn Socket.IO, and a simple game with straightforward
 multiplayer interactions seemed like a good idea. I had different ideas, like using [Phaser](https://phaser.io) to
-create some new but simple game that could be played by any number of player, similar to [Agar.io](https://agar.io) and
+create some new but simple game that could be played by any number of players, similar to [Agar.io](https://agar.io) and
 its many clones.
 
-That seemed a bit too much for the purpose of learning a real time communication library, so I ended up with a much
-simpler concept: a turn-based multiplayer minesweeper.
+That seemed a bit too much for the purpose of learning a real-time communication library, so I ended up with a much
+simpler concept: a turn-based multiplayer Minesweeper game.
 
 My inspiration was Minesweeper Flags, the minesweeper game some of us played many years ago in MSN Instant Games within
 MSN Messenger and Windows Live Messenger:
@@ -27,7 +26,7 @@ player that finds the most mines when all of them have been found wins. There is
 reveals a square of tiles at once, and it can be used once per game. When a player finds a mine, they can play again,
 allowing for fun streaks and comebacks.
 
-The main difference between the old game and my implementation is that the new one allows for an arbitrary amount of
+The main difference between the old game and my implementation is that the new one allows for any number of
 players. You can set up a big board and play with a group of friends while talking in the game chat.
 
 This is how it looks:
@@ -43,16 +42,16 @@ These are the technologies used in the full project:
 | Rendering: [ReactJS](https://reactjs.org)       | Server: [NodeJS](https://nodejs.org)         | Real-time communication: [Socket.IO](https://socket.io/) |
 | Styling: [TailwindCSS](https://tailwindcss.com) | Database: [MongoDB](https://www.mongodb.com) |                                                          |
 
-From this table, the only thing I was familiar with was ReactJS, which would facilitate rendering the relevant
-information to the DOM, keeping a client state, and handling user events.
+React was the only technology in this table I already knew. I used it to render the interface, keep client state, and
+handle user events.
 
 ### Socket.IO
 
-Socket.IO was the more interesting and useful library I used. It has separate client and server libraries, with
+Socket.IO was the most interesting and useful library I used. It has separate client and server libraries, with
 support for several languages, and you can actually combine any of the implementations.
 
-For simplicity’s sake, and since I haven't used NodeJS to build a server before, I decided to go with Javascript in both
-client and server.
+To keep things simple, and because I hadn't built a server with Node.js before, I used JavaScript on both the client
+and server.
 
 Here's a small example of client and server sending and handling messages:
 
@@ -99,5 +98,5 @@ There is also a very good [Get Started](https://socket.io/get-started) with some
 
 ### I want to play
 
-Sure, you can play the game on <https://minesweeper.clotet.dev> and see the code on
+You can play the game on <https://minesweeper.clotet.dev> and see the code on
 <https://gitlab.com/rogerclotet/minesweeper>.

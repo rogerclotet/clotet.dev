@@ -1,20 +1,18 @@
 ---
 title: React props and useContext
-description: Props usages and alternatives like the useContext hook when using nested components
+description: Passing props through nested components and when to use the useContext hook
 slug: react-props-and-use-context
 tags: ["react", "frontend"]
 date: 2019-11-28
 ---
 
-This seems such a simple topic but it's trickier than it sounds to get it right to allow your code to scale up to large
-applications.
+Passing props seems simple, but it gets harder to manage as an application grows.
 
-For a quick introductions, as you can read on the 
-[React documentation](https://reactjs.org/docs/components-and-props.html), "props" are just properties you pass to your
-components. They can be anything, from scalar values, to objects, to full components themselves.
+As the [React documentation](https://reactjs.org/docs/components-and-props.html) explains, props are properties you pass
+to components. They can be scalar values, objects, or even components.
 
-In the following example, `name` is a prop with `string` type (to use types you must use TypeScript or `prop-types`, you
-can read more in my [last post](/blog/why-use-typescript-for-react-projects).
+In this TypeScript example, `name` is a prop with the `string` type. You can read more about typed props in my
+[previous post](/blog/why-use-typescript-for-react-projects).
 
 ```tsx
 interface Props {
@@ -31,8 +29,7 @@ const Hello = (props: Props) => {
 
 ### When things get messy
 
-For simple components that's really easy, you can use any props you need and you won't have any issues. When you start
-composing more and more components though, you can end up with something like this:
+Passing props works well for simple components. As you nest more components, though, you can end up with something like this:
 
 ```tsx
 import React from 'react'
@@ -61,12 +58,10 @@ const [user1, user2, user3, user4] = [{id: 1, name: 'a'}, {id: 2, name: 'b'}, {i
 <Page user={user1} friends={[user2, user3, user4]} screenSize="md" />
 ```
 
-This is just an example and you can imagine why `Friend` would need the screenSize, maybe we want to display fewer
-elements if we are in a small screen.
+Here, `Friend` might need `screenSize` to display fewer elements on a small screen.
 
-If you take a look at the props we're using in those 3 components, we are passing around all props just to be used in 
-one or two components, and this tends to happen a lot (and I mean a LOT) when you're working in a large codebase, if
-you're not really careful.
+These three components pass along props that only one or two of them use. In a large codebase, it's easy to end up
+with many components passing data they don't need themselves.
 
 Let's see the alternative using the `useContext` [hook](https://reactjs.org/docs/hooks-state.html#whats-a-hook):
 
@@ -105,19 +100,17 @@ const FriendList = (props: {friends: User[]}) => {
 <Page friends={[user2, user3, user4]} />
 ```
 
-As you can see, having less props you don't need makes the core much more readable and maintainable, lets you edit make
-changes much quicker, and feels better in general.
+Removing unused props makes the code easier to read and change.
 
-You only need to declare the contexts you need -in this case one for `user` and one for `screenSize`. We're using `user` 
-in both child components, but it can be for unrelated reasons, and we could have nested them inside other components who
-wouldn't care about `user`. `screenSize` will be used from `Friend` and the other components don't need to know if that
-component uses it. It's not their responsibility.
+Here, we declare one context for `user` and another for `screenSize`. Both child components use `user`, even if they
+need it for different reasons. We can nest them inside components that don't use `user` without passing it through
+each level. Only `Friend` uses `screenSize`, so the other components don't need to handle it.
 
 ### Final note
 
 Contexts are great, but don't overuse them either. Have them as another tool to structure your code and separate
 concerns, but use regular props for everything that makes sense, like passing the data a component wants to render, or 
-something that both parent and children components share.
+something that both parent and child components share.
 
 ### Further reading
 

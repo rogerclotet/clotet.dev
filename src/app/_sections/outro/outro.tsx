@@ -20,9 +20,7 @@ export default function Outro() {
 	return (
 		<div className="min-h-dvh flex flex-col justify-center p-2 lg:p-6">
 			<Title className="mb-8">That&apos;s it!</Title>
-			<p>
-				I&apos;m always working in side projects and willing to collaborate.
-			</p>
+			<p>I&apos;m always working on side projects and open to collaborating.</p>
 
 			<MailLink className="hidden lg:flex" />
 

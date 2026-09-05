@@ -10,10 +10,10 @@ date: 2024-06-23
 featured: true
 ---
 
-A shared space app I started back in 2020 and have rewritten from scratch twice already. Hopefully this is the last time, since it's at a point where we're actively using it with several groups and it's evolving based on feedback from real users. It has been received very well by the people I've shared it with, and I can see myself actively working on it for years to come.
+A shared space app I started in 2020 and have rewritten from scratch twice. Hopefully that's the last rewrite. Several groups now use it regularly, and their feedback shapes what I build next.
 
-The idea is to consolidate lists, plans, files, and shared expenses in one place for the people you share your daily life with — whether that's a partner, roommates, family, or friends. For instance, you can share a grocery list, a calendar with linked events, files and notes, or split expenses with automatic settlement calculations.
+Suro brings lists, plans, files, and shared expenses together for partners, roommates, families, and friends. You can share grocery lists, calendars with linked events, files, and notes. It also splits expenses and calculates who owes whom.
 
-The feature list is meant to grow, but the central idea is to replace the chaos of chats, spreadsheets, and reminders with one shared space per group.
+I plan to keep adding features, with one shared space per group to replace scattered chats, spreadsheets, and reminders.
 
-The tech used is Next.js for the frontend and backend, PostgreSQL for the database connected with Drizzle ORM, and Tailwind CSS for styling.
+I built it with Next.js for the frontend and backend, PostgreSQL with Drizzle ORM for the database, and Tailwind CSS for styling.
