@@ -4,6 +4,7 @@ import {
 	SiProtonmail,
 } from "@icons-pack/react-simple-icons";
 import Logo from "@/app/_components/logo";
+import { getTranslations } from "@/lib/i18n/server";
 
 function LinkedinIcon({ size = 24 }: { size?: number }) {
 	return (
@@ -20,15 +21,16 @@ function LinkedinIcon({ size = 24 }: { size?: number }) {
 	);
 }
 
-export default function Intro() {
+export default async function Intro() {
+	const t = await getTranslations();
 	return (
 		<div className="min-h-dvh flex items-center justify-center p-2 lg:p-6">
 			<div className="flex flex-wrap md:gap-6 items-center">
 				<div className="mb-14 grow">
-					<Logo width={50} height={50} />
+					<Logo aria-label={t.logo} width={50} height={50} />
 					<h2 className="pt-2 text-3xl">Roger Clotet</h2>
 					<h1 className="pb-4 text-6xl text-[hsl(var(--primary-foreground))]">
-						Hello, World!
+						{t.hello}
 					</h1>
 
 					<div className="flex gap-4">
@@ -60,9 +62,9 @@ export default function Intro() {
 				</div>
 
 				<div className="text-[hsl(var(--primary-foreground))] text-sm lg:text-lg leading-tight text-right grow">
-					<p>I&apos;m a dad and a software engineer based in Girona</p>
-					<p>I build web apps and distributed systems</p>
-					<p>I love learning, photography, video games, and driving</p>
+					<p>{t.bio}</p>
+					<p>{t.building}</p>
+					<p>{t.interests}</p>
 				</div>
 			</div>
 		</div>

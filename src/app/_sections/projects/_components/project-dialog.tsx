@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import {
 	Dialog,
@@ -7,9 +9,9 @@ import {
 	DialogTitle,
 	DialogTrigger,
 } from "@/components/ui/dialog";
+import { useTranslations } from "@/lib/i18n/provider";
 import type { Project } from "@/lib/projects/projects";
 import { cn } from "@/lib/utils";
-import { getCategoryName } from "../_utils/category-name";
 import CategoryIcon from "./category-icon";
 import ProjectLinks from "./project-links";
 import ProjectPreview from "./project-preview";
@@ -25,6 +27,7 @@ export default function ProjectDialog({
 	open?: boolean;
 	onOpenChange?: (open: boolean) => void;
 }) {
+	const t = useTranslations();
 	return (
 		<Dialog open={open} onOpenChange={onOpenChange}>
 			<DialogTrigger asChild>
@@ -35,7 +38,11 @@ export default function ProjectDialog({
 					/>
 				</div>
 			</DialogTrigger>
-			<DialogContent className="gap-0">
+			<DialogContent
+				className="gap-0"
+				closeLabel={t.close}
+				aria-describedby={undefined}
+			>
 				<DialogHeader>
 					<DialogTitle className="text-2xl text-[hsl(var(--primary-foreground))]">
 						{project.title}
@@ -43,7 +50,7 @@ export default function ProjectDialog({
 				</DialogHeader>
 				<div className="flex flex-col project">
 					<div className="text-muted-foreground flex flex-row items-center gap-2">
-						{getCategoryName(project.category)}
+						{t.categories[project.category]}
 						<CategoryIcon category={project.category} />
 						{project.date.getFullYear()}
 					</div>

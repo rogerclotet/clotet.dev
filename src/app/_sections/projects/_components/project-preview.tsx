@@ -1,3 +1,5 @@
+"use client";
+
 import {
 	Card,
 	CardContent,
@@ -10,8 +12,8 @@ import {
 	TooltipContent,
 	TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { useTranslations } from "@/lib/i18n/provider";
 import type { Project } from "@/lib/projects/projects";
-import { getCategoryName } from "../_utils/category-name";
 import CategoryIcon from "./category-icon";
 import ProjectLinks from "./project-links";
 
@@ -22,12 +24,13 @@ export default function ProjectPreview({
 	project: Project;
 	className?: string;
 }) {
+	const t = useTranslations();
 	return (
 		<Card className={className}>
 			<CardHeader>
 				<CardTitle className="flex flex-row items-center justify-between gap-4 text-[hsl(var(--primary-foreground))]">
 					{project.title}{" "}
-					<TooltipIcon label={getCategoryName(project.category)}>
+					<TooltipIcon label={t.categories[project.category]}>
 						<CategoryIcon category={project.category} />
 					</TooltipIcon>
 				</CardTitle>

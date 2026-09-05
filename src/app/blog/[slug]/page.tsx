@@ -3,6 +3,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import Title from "@/app/_components/title";
 import { getPost } from "@/lib/blog/posts";
+import { getLocale, getTranslations } from "@/lib/i18n/server";
 import TagBadge from "../_components/tag-badge";
 import "../highlight.css";
 
@@ -12,12 +13,14 @@ type Params = {
 
 export default async function BlogPost(props: { params: Promise<Params> }) {
 	const params = await props.params;
-	const postData = await getPost(params.slug);
+	const locale = await getLocale();
+	const postData = await getPost(params.slug, locale);
 	if (!postData) {
 		return redirect("/blog");
 	}
 
 	const { post, related } = postData;
+	const t = await getTranslations();
 
 	return (
 		<div className="mb-20">
@@ -29,7 +32,7 @@ export default async function BlogPost(props: { params: Promise<Params> }) {
 					))}
 				</div>
 
-				<span>{post.date.toLocaleDateString()}</span>
+				<span>{post.date.toLocaleDateString(locale, { timeZone: "UTC" })}</span>
 			</div>
 
 			<div className="blog-post py-8">
@@ -38,7 +41,7 @@ export default async function BlogPost(props: { params: Promise<Params> }) {
 
 				{related.length > 0 && (
 					<>
-						<h3>Related articles:</h3>
+						<h3>{t.relatedArticles}</h3>
 						<ul>
 							{related.map((post) => (
 								<li key={post.slug}>
@@ -51,7 +54,7 @@ export default async function BlogPost(props: { params: Promise<Params> }) {
 			</div>
 
 			<div>
-				<Link href="/blog">← More articles</Link>
+				<Link href="/blog">{t.moreArticles}</Link>
 			</div>
 		</div>
 	);
@@ -62,7 +65,8 @@ export async function generateMetadata(
 	_parent: ResolvingMetadata,
 ): Promise<Metadata> {
 	const params = await props.params;
-	const postData = await getPost(params.slug);
+	const locale = await getLocale();
+	const postData = await getPost(params.slug, locale);
 	if (!postData) {
 		return {};
 	}
