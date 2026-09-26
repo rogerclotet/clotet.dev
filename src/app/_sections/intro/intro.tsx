@@ -36,6 +36,8 @@ export default async function Intro() {
 					<div className="flex gap-4">
 						<a
 							href="https://github.com/rogerclotet"
+							data-umami-event="social-click"
+							data-umami-event-platform="github"
 							target="_blank"
 							rel="noopener"
 						>
@@ -43,6 +45,8 @@ export default async function Intro() {
 						</a>
 						<a
 							href="https://gitlab.com/rogerclotet"
+							data-umami-event="social-click"
+							data-umami-event-platform="gitlab"
 							target="_blank"
 							rel="noopener"
 						>
@@ -50,12 +54,18 @@ export default async function Intro() {
 						</a>
 						<a
 							href="https://linkedin.com/in/rogerclotet"
+							data-umami-event="social-click"
+							data-umami-event-platform="linkedin"
 							target="_blank"
 							rel="noopener"
 						>
 							<LinkedinIcon size={24} />
 						</a>
-						<a href="mailto:roger@clotet.dev">
+						<a
+							href="mailto:roger@clotet.dev"
+							data-umami-event="email-click"
+							data-umami-event-location="intro"
+						>
 							<SiProtonmail size={24} />
 						</a>
 					</div>

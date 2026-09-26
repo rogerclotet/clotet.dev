@@ -17,6 +17,8 @@ export default function ProjectLinks({ project }: { project: Project }) {
 			{project.link && (
 				<a
 					href={project.link}
+					data-umami-event="project-visit"
+					data-umami-event-project={project.slug}
 					target="_blank"
 					rel="noopener noreferrer"
 					className="flex items-center gap-2"
@@ -30,6 +32,8 @@ export default function ProjectLinks({ project }: { project: Project }) {
 			{project.repo && (
 				<a
 					href={project.repo}
+					data-umami-event="project-source"
+					data-umami-event-project={project.slug}
 					target="_blank"
 					rel="noopener noreferrer"
 					className="flex items-center gap-2"

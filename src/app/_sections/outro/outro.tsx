@@ -9,6 +9,8 @@ function MailLink({ className }: { className?: string }) {
 			<div className="w-full h-px border-[hsl(var(--primary-foreground))] border-b-2" />
 			<a
 				href="mailto:roger@clotet.dev"
+				data-umami-event="email-click"
+				data-umami-event-location="outro"
 				className="flex items-center gap-2 font-semibold text-lg"
 			>
 				<Mail /> roger@clotet.dev
