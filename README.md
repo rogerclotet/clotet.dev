@@ -4,8 +4,7 @@ Run `bun install` and `bun run dev` to develop locally. Check changes with
 `bun run lint`, `bun run test`, and `bun run build`.
 
 The site does not collect audience or product analytics. There are no analytics
-scripts, tracking events, collection endpoints, or scheduled exports. The
-privacy page explains the language preference cookie and hosting connection data.
+scripts, tracking events, collection endpoints, or scheduled exports.
 
 The site supports English, Catalan, and Spanish. On the first visit, it matches
 `Accept-Language` preferences in priority order, including regional variants such
