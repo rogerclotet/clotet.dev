@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { usePostHog } from "posthog-js/react";
 import {
 	Dialog,
 	DialogContent,
@@ -29,22 +28,10 @@ export default function ProjectDialog({
 	onOpenChange?: (open: boolean) => void;
 }) {
 	const t = useTranslations();
-	const posthog = usePostHog();
-
-	const handleOpenChange = (nextOpen: boolean) => {
-		onOpenChange?.(nextOpen);
-		if (nextOpen) {
-			posthog.capture("project-details", { project: project.slug });
-		}
-	};
 
 	return (
-		<Dialog open={open} onOpenChange={handleOpenChange}>
-			<DialogTrigger
-				asChild
-				data-umami-event="project-details"
-				data-umami-event-project={project.slug}
-			>
+		<Dialog open={open} onOpenChange={onOpenChange}>
+			<DialogTrigger asChild>
 				<div>
 					<ProjectPreview
 						project={project}

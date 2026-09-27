@@ -3,27 +3,9 @@
 Run `bun install` and `bun run dev` to develop locally. Check changes with
 `bun run lint`, `bun run test`, and `bun run build`.
 
-Configure Umami in your deployment environment or `.env.local`:
-
-- `UMAMI_SCRIPT_URL`: the full tracker script URL, including `/script.js`.
-- `UMAMI_WEBSITE_ID`: the website ID from Umami.
-
-The tracker loads only when both variables are set. The root layout restricts
-collection to `clotet.dev` and `www.clotet.dev`, excluding localhost and preview
-deployments.
-PostHog remains enabled alongside Umami when `NEXT_PUBLIC_POSTHOG_KEY` is set.
-
-Umami automatically records pageviews, including client-side navigation. Custom
-click events use its `data-umami-event` attributes:
-
-- `project-visit` and `project-source`, with the project slug in `project`.
-- `social-click`, with `platform` set to `github`, `gitlab`, or `linkedin`.
-- `email-click`, with `location` set to `intro` or `outro`.
-- `resume-click`, when opening the résumé PDF.
-
-After deploying, visit the site and check pageviews and events in Umami. Browser
-ad blockers can prevent collection. See the [Umami event documentation](https://docs.umami.is/docs/track-events)
-to add more events.
+The site does not collect audience or product analytics. There are no analytics
+scripts, tracking events, collection endpoints, or scheduled exports. The
+privacy page explains the language preference cookie and hosting connection data.
 
 The site supports English, Catalan, and Spanish. On the first visit, it matches
 `Accept-Language` preferences in priority order, including regional variants such

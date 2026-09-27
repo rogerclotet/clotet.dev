@@ -14,7 +14,6 @@ export default async function WorkExperience() {
 				<Title className="pl-6">{t.workExperience}</Title>
 				<a
 					href="https://gitlab.com/rogerclotet/resume/-/raw/master/resume.pdf"
-					data-umami-event="resume-click"
 					target="_blank"
 					className="flex gap-2 items-center font-semibold text-lg"
 					rel="noopener"

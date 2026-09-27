@@ -1,6 +1,13 @@
 import type { Locale } from "./locale";
 
 const en = {
+	privacy: "Privacy",
+	privacyTracking:
+		"This website does not use analytics scripts, record browsing sessions, or track page views and clicks.",
+	privacyPreferences:
+		"The language selector saves your chosen language in a cookie for one year. This cookie is only used to remember your preference.",
+	privacyHosting:
+		"The website's hosting service receives connection information, including your IP address, to deliver pages. Contact me at the address below with any privacy questions.",
 	language: "Language",
 	languageError: "Could not change the language. Please try again.",
 	home: "Home",
@@ -43,6 +50,13 @@ const en = {
 export const messages = {
 	en,
 	ca: {
+		privacy: "Privacitat",
+		privacyTracking:
+			"Aquest web no fa servir scripts d'analítica, no grava sessions de navegació ni fa seguiment de visualitzacions de pàgines o clics.",
+		privacyPreferences:
+			"El selector d'idioma desa la llengua escollida en una galeta durant un any. Aquesta galeta només es fa servir per recordar la teva preferència.",
+		privacyHosting:
+			"El servei d'allotjament del web rep informació de connexió, inclosa l'adreça IP, per servir les pàgines. Per a qualsevol dubte sobre privacitat, escriu-me a l'adreça següent.",
 		language: "Llengua",
 		languageError: "No s'ha pogut canviar la llengua. Torna-ho a provar.",
 		home: "Inici",
@@ -82,6 +96,13 @@ export const messages = {
 		moreArticles: "← Més articles",
 	},
 	es: {
+		privacy: "Privacidad",
+		privacyTracking:
+			"Esta web no usa scripts de analítica, no graba sesiones de navegación ni hace seguimiento de visualizaciones de páginas o clics.",
+		privacyPreferences:
+			"El selector de idioma guarda la lengua elegida en una cookie durante un año. Esta cookie solo se usa para recordar tu preferencia.",
+		privacyHosting:
+			"El servicio de alojamiento de la web recibe información de conexión, incluida tu dirección IP, para servir las páginas. Para cualquier duda sobre privacidad, escríbeme a la siguiente dirección.",
 		language: "Idioma",
 		languageError: "No se ha podido cambiar el idioma. Inténtalo de nuevo.",
 		home: "Inicio",
