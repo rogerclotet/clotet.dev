@@ -5,8 +5,9 @@ process.env.SENTRY_CLI_NO_TELEMETRY = "1";
 process.env.SENTRY_CLI_NO_UPDATE_CHECK = "1";
 
 const uploadSourceMaps = process.env.GLITCHTIP_UPLOAD_SOURCEMAPS === "true";
-const release =
+const commitSha =
 	process.env.GLITCHTIP_RELEASE || process.env.VERCEL_GIT_COMMIT_SHA;
+const release = commitSha ? `clotet.dev@${commitSha.slice(0, 7)}` : undefined;
 
 if (uploadSourceMaps) {
 	for (const name of [

@@ -21,7 +21,8 @@ For Vercel, set the following environment variables on the deployment project:
 - `GLITCHTIP_AUTH_TOKEN`: an upload token stored as a build secret. Never use a
   `NEXT_PUBLIC_` prefix or commit this token.
 - `GLITCHTIP_RELEASE`: a unique commit SHA. On Vercel this defaults to
-  `VERCEL_GIT_COMMIT_SHA`.
+  `VERCEL_GIT_COMMIT_SHA`. Source maps use the release version
+  `clotet.dev@<first 7 characters of the SHA>`.
 
 Source maps upload from the deployment build, then are deleted from its output.
 Missing upload configuration or a failed upload fails the build. The GitHub
