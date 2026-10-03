@@ -5,7 +5,11 @@ import { usePathname } from "next/navigation";
 import LanguageSelector from "./language-selector";
 import Logo from "./logo";
 
-export default function Header() {
+export default function Header({
+	showBreadcrumbs = true,
+}: {
+	showBreadcrumbs?: boolean;
+}) {
 	const pathname = usePathname();
 	const pathnameParts = pathname
 		.replace(/\/$/g, "")
@@ -44,19 +48,20 @@ export default function Header() {
 				>
 					<Logo aria-label="Roger Clotet" width={24} height={24} />
 				</Link>
-				{pathnameParts.map((part, index) => (
-					<div key={part} className="flex items-baseline gap-3">
-						<span className="text-[hsl(var(--primary-foreground))] font-bold text-2xl">
-							/
-						</span>
-						<Link
-							href={`/${pathnameParts.slice(0, index + 1).join("/")}`}
-							className="text-[hsl(var(--foreground))] font-bold monospace text-xl"
-						>
-							{part}
-						</Link>
-					</div>
-				))}
+				{showBreadcrumbs &&
+					pathnameParts.map((part, index) => (
+						<div key={part} className="flex items-baseline gap-3">
+							<span className="text-[hsl(var(--primary-foreground))] font-bold text-2xl">
+								/
+							</span>
+							<Link
+								href={`/${pathnameParts.slice(0, index + 1).join("/")}`}
+								className="text-[hsl(var(--foreground))] font-bold monospace text-xl"
+							>
+								{part}
+							</Link>
+						</div>
+					))}
 			</div>
 			<LanguageSelector />
 		</div>
