@@ -20,6 +20,8 @@
     "@icons-pack/react-simple-icons": "^13.13.0",
     "@radix-ui/react-dialog": "^1.1.23",
     "@radix-ui/react-tooltip": "^1.2.16",
+    "@sentry/core": "11.4.0",
+    "@sentry/nextjs": "11.4.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "gray-matter": "^4.0.3",
