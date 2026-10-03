@@ -11,4 +11,10 @@ export async function register() {
 	if (process.env.NEXT_RUNTIME === "edge") await import("./sentry.edge.config");
 }
 
-export const onRequestError = Sentry.captureRequestError;
+export async function onRequestError(
+	...args: Parameters<typeof Sentry.captureRequestError>
+) {
+	Sentry.captureRequestError(...args);
+	// Keep the request alive while reporting, allowing for the 5s transport timeout.
+	await Sentry.flush(6000);
+}
