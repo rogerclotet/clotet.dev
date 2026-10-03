@@ -3,9 +3,10 @@ import { createServer } from "node:http";
 import { test } from "node:test";
 import { parseEnvelope } from "@sentry/core";
 import * as Sentry from "@sentry/nextjs";
+import { onRequestError } from "../../instrumentation";
 import { errorOptions } from "./options";
 
-test("the real SDK preserves exception messages but drops visitor context, standalone messages, and logs", async () => {
+test("the request error hook delivers errors before returning and drops visitor context, standalone messages, and logs", async () => {
 	const reports: string[] = [];
 	const server = createServer(async (req, res) => {
 		let body = "";
@@ -30,7 +31,7 @@ test("the real SDK preserves exception messages but drops visitor context, stand
 			"Cannot read properties of undefined (reading 'title')",
 		);
 		error.stack = `TypeError: ${error.message}\n    at example (/project/.next/server/chunks/app.js:12:34)`;
-		Sentry.captureRequestError(
+		await onRequestError(
 			error,
 			{
 				path: "/private?token=secret",
@@ -39,6 +40,7 @@ test("the real SDK preserves exception messages but drops visitor context, stand
 			},
 			{ routerKind: "App Router", routePath: "/private", routeType: "render" },
 		);
+		assert.equal(reports.length, 1, "the hook must wait for error delivery");
 		Sentry.captureMessage("secret message");
 		Sentry.logger.info("secret log");
 		await Sentry.flush(3000);
